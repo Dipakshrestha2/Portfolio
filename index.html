@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Senior Administrator | Operations Management Portfolio</title>
+    <title>Senior Administrator | Operations Management Portfolio (Freelance Web/App Developer (In Progress))</title>
     <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -189,27 +189,131 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero-bg min-h-screen flex items-center pt-16" id="vanta-bg">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-                <div class="text-white" data-aos="fade-right">
-                    <h1 class="text-4xl md:text-5xl font-bold mb-4">Senior Administrator</h1>
-                    <h2 class="text-2xl md:text-3xl font-semibold mb-6">Operations Management Expert</h2>
-                    <p class="text-lg mb-8 max-w-lg">Strategic leader with 8+ years of experience optimizing business operations, improving efficiency, and driving organizational success as Dipak Shrestha.</p>
-                    <div class="flex space-x-4">
-                        <a href="#contact" class="bg-white text-blue-600 px-6 py-3 rounded-lg font-medium hover:bg-gray-100 transition duration-300">Get In Touch</a>
-                        <a href="#about" class="border border-white text-white px-6 py-3 rounded-lg font-medium hover:bg-white hover:text-blue-600 transition duration-300">Learn More</a>
-                    </div>
-                </div>
-                <div class="flex justify-center" data-aos="fade-left">
-                    <div class="bg-gray-800 p-2 rounded-full shadow-xl floating">
-                       <img src="Dipak.JPG" alt="Profile" class="w-64 h-64 md:w-80 md:h-80 rounded-full object-cover pulse">
-                    </div>
-                </div>
-            </div>
+<!-- Hero Section -->
+<section id="home" class="hero-bg min-h-screen flex items-center pt-16">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+      
+      <!-- Left Content -->
+      <div class="text-white">
+        <!-- Headings with staggered animations -->
+        <h1 class="text-4xl md:text-5xl font-bold mb-4 opacity-0 animate-stagger delay-0">
+          Senior Administrator
+        </h1>
+
+        <h2 class="text-2xl md:text-3xl font-semibold mb-6 opacity-0 animate-stagger delay-1">
+          Operations Management Expert
+        </h2>
+
+        <!-- Typing Effect -->
+        <h3 class="text-xl md:text-2xl font-semibold mb-6 opacity-0 animate-stagger delay-2">
+          <span id="typing-text"></span>
+          <span class="text-yellow-400 font-semibold">(In Progress)</span>
+        </h3>
+
+        <p class="text-lg mb-8 max-w-lg opacity-0 animate-stagger delay-3">
+          Strategic leader with 8+ years of experience optimizing business operations,
+          improving efficiency, and driving organizational success as Dipak Shrestha.
+        </p>
+
+        <div class="flex space-x-4 opacity-0 animate-stagger delay-4">
+          <a href="#contact" class="bg-white text-blue-600 px-6 py-3 rounded-lg font-medium hover:bg-gray-100 transition duration-300">
+            Get In Touch
+          </a>
+          <a href="#about" class="border border-white text-white px-6 py-3 rounded-lg font-medium hover:bg-white hover:text-blue-600 transition duration-300">
+            Learn More
+          </a>
         </div>
-    </section>
+      </div>
+
+      <!-- Right Image -->
+      <div class="flex justify-center opacity-0 animate-stagger delay-5">
+        <div class="bg-gray-800 p-2 rounded-full shadow-xl floating">
+          <img src="Dipak.JPG" alt="Profile" class="w-64 h-64 md:w-80 md:h-80 rounded-full object-cover">
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Custom Animation CSS -->
+<style>
+  @keyframes fadeSlideUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .animate-stagger { animation: fadeSlideUp 1s ease forwards; }
+  .delay-0 { animation-delay: 0s; }
+  .delay-1 { animation-delay: 0.4s; }
+  .delay-2 { animation-delay: 0.8s; }
+  .delay-3 { animation-delay: 1.2s; }
+  .delay-4 { animation-delay: 1.6s; }
+  .delay-5 { animation-delay: 2s; }
+
+  /* Floating subtle animation for profile image */
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+  }
+  .floating { animation: float 4s ease-in-out infinite; }
+
+  /* Typing effect cursor */
+  #typing-text::after {
+    content: '|';
+    display: inline-block;
+    margin-left: 4px;
+    animation: blink 0.7s infinite;
+  }
+  @keyframes blink {
+    0%, 50% { opacity: 1; }
+    51%, 100% { opacity: 0; }
+  }
+</style>
+
+<!-- Typing Effect Script -->
+<script>
+  const roles = [
+    "Data Analyst",
+    "Freelance Web Developer",
+    "Freelance App Developer"
+  ];
+
+  let currentRole = 0;
+  let currentChar = 0;
+  let isDeleting = false;
+  const typingSpeed = 100;
+  const erasingSpeed = 50;
+  const delayBetween = 1500;
+  const typingTextElement = document.getElementById("typing-text");
+
+  function typeEffect() {
+    const role = roles[currentRole];
+    
+    if (isDeleting) {
+      typingTextElement.textContent = role.substring(0, currentChar--);
+      if (currentChar < 0) {
+        isDeleting = false;
+        currentRole = (currentRole + 1) % roles.length;
+        setTimeout(typeEffect, typingSpeed);
+      } else {
+        setTimeout(typeEffect, erasingSpeed);
+      }
+    } else {
+      typingTextElement.textContent = role.substring(0, currentChar++);
+      if (currentChar > role.length) {
+        isDeleting = true;
+        setTimeout(typeEffect, delayBetween);
+      } else {
+        setTimeout(typeEffect, typingSpeed);
+      }
+    }
+  }
+
+  document.addEventListener("DOMContentLoaded", () => {
+    setTimeout(typeEffect, 1000); // start typing after fade-in
+  });
+</script>
 
     <!-- About Section -->
     <section id="about" class="py-20 bg-gray-800">
@@ -565,7 +669,7 @@
                 <!-- Project 4 -->
                 <div class="bg-black rounded-xl overflow-hidden card-hover" data-aos="fade-up" data-aos-delay="200">
                     <div class="h-48 overflow-hidden">
-                        <img src="http://static.photos/technology/640x360/3" alt="Tableau Dashboard Screenshot" class="w-full h-full object-cover">
+                        <img src="Customer Insights Dashboard" alt="Tableau Dashboard Screenshot" class="w-full h-full object-cover">
                     </div>
                     <div class="p-6">
                         <h3 class="text-xl font-semibold text-white mb-2">Customer Insights Dashboard</h3>
@@ -814,7 +918,7 @@
             subject: document.getElementById("subject").value,
             name: document.getElementById("name").value,
             from_name: document.getElementById("name").value,
-            to_name: "rojits2002@gmail.com",
+            to_name: "Shrestha.echo@oulook.com",
             email: document.getElementById("email").value,
             message: document.getElementById("message").value,
             time: new Date().toLocaleString()
