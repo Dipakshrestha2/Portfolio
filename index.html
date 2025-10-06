@@ -1,243 +1,261 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Senior Administrator | Operations Management Portfolio (Freelance Web/App Developer (In Progress))</title>
-    <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
-    <script src="https://unpkg.com/feather-icons"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.globe.min.js"></script>
-    <style>
-        .project-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 20px;
-            max-width: 1100px;
-            margin: 0 auto;
-        }
-        .project-card {
-            background: #161b22;
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0px 4px 10px rgba(0,0,0,0.3);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Professional portfolio of a Senior Administrator specializing in Operations Management, Process Optimization, and Web/App Development (In Progress).">
+  <meta name="keywords" content="Operations Management, Administrator, Portfolio, Freelance Developer, Process Optimization, Team Leadership, Web Developer, NEPSE, Project Management">
+  <meta name="author" content="Dipak Shrestha" />
 
-        .project-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0px 8px 20px rgba(0,0,0,0.5);
-        }
+  <title>Dipak Shrestha | Operations Management Portfolio (Freelance Web/App Developer - In Progress)</title>
+  <link rel="icon" type="image/x-icon" href="/static/favicon.ico" />
 
-        .project-card img {
-            width: 100%;
-            height: 180px;
-            object-fit: cover;
-            display: block;
-        }
+  <script src="https://cdn.tailwindcss.com"></script>
 
-        .project-info {
-            padding: 15px;
-        }
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
 
-        .project-info h3 {
-            font-size: 1.2rem;
-            margin-bottom: 10px;
-        }
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
 
-        .project-info p {
-            font-size: 0.9rem;
-            color: #ccc;
-            margin-bottom: 15px;
-        }
+  <script src="https://cdn.jsdelivr.net/npm/three@0.141.0/build/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.globe.min.js"></script>
 
-        .project-btn {
-            display: inline-block;
-            padding: 10px 20px;
-            background-color: #007bff;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-            font-weight: bold;
-            transition: background 0.3s ease;
-        }
+  <style>
+    /* ===================================================================
+    🌐 DUAL-THEME COLOR VARIABLES
+    ===================================================================
+    */
 
-        .project-btn:hover {
-            background-color: #0056b3;
-        }
+    /* Default (Dark) Theme */
+    [data-theme="dark"] {
+      --color-primary: #3b82f6;       /* Blue */
+      --color-primary-dark: #2563eb;
+      --color-bg-main: #020617;       /* Darker Navy */
+      --color-bg-secondary: #0f172a;  /* Dark Navy */
+      --color-bg-card: #1e293b;       /* Dark Slate */
+      --color-text-main: #f8fafc;     /* Light White */
+      --color-text-subtle: #94a3b8;   /* Gray */
+      --color-border: #1e293b;        /* Dark Slate for borders/dividers */
+    }
 
-        :root {
-            --primary: #3b82f6;
-            --primary-dark: #2563eb;
-            --dark: #0f172a;
-            --darker: #020617;
-            --light: #f8fafc;
-            --gray: #64748b;
-            --dark-gray: #1e293b;
-        }
-        
-        body {
-            background-color: var(--darker);
-            color: var(--light);
-        }
-        
-        .hero-bg {
-            background: linear-gradient(135deg, var(--dark) 0%, var(--darker) 100%);
-        }
-        
-        .skill-bar {
-            transition: width 1.5s ease-in-out;
-        }
-        
-        .nav-link {
-            position: relative;
-            color: var(--gray);
-        }
-        
-        .nav-link:after {
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 2px;
-            bottom: -2px;
-            left: 0;
-            background-color: var(--primary);
-            transition: width 0.3s ease;
-        }
-        
-        .nav-link:hover {
-            color: var(--primary);
-        }
-        
-        .nav-link:hover:after {
-            width: 100%;
-        }
-        
-        .bg-gray-50, .bg-white {
-            background-color: var(--dark) !important;
-            color: var(--light) !important;
-        }
-        
-        .text-gray-600, .text-gray-700, .text-gray-800, .text-gray-900 {
-            color: var(--gray) !important;
-        }
-        
-        .border-gray-300 {
-            border-color: var(--dark-gray) !important;
-        }
-        
-        .bg-blue-100 {
-            background-color: rgba(59, 130, 246, 0.2) !important;
-        }
-        
-        .shadow-sm, .shadow-lg {
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.5), 0 2px 4px -1px rgba(0, 0, 0, 0.3) !important;
-        }
-        
-        @keyframes float {
-            0% { transform: translateY(0px); }
-            50% { transform: translateY(-20px); }
-            100% { transform: translateY(0px); }
-        }
-        
-        .floating {
-            animation: float 6s ease-in-out infinite;
-        }
-        
-        .pulse {
-            animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
-        }
-        
-        @keyframes pulse {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0.5; }
-        }
-    </style>
+    /* Light Theme */
+    [data-theme="light"] {
+      --color-primary: #10b981;       /* Emerald Green */
+      --color-primary-dark: #059669;
+      --color-bg-main: #f3f4f6;       /* Light Gray */
+      --color-bg-secondary: #ffffff;  /* White */
+      --color-bg-card: #ffffff;       /* White */
+      --color-text-main: #1f2937;     /* Dark Gray */
+      --color-text-subtle: #4b5563;   /* Medium Gray */
+      --color-border: #e5e7eb;        /* Light Border */
+    }
+
+    /* ===================================================================
+    🌐 GLOBAL STYLES & UTILITY OVERRIDES
+    ===================================================================
+    */
+    body {
+      font-family: 'Poppins', 'Inter', sans-serif;
+      background-color: var(--color-bg-main);
+      color: var(--color-text-main);
+      margin: 0;
+      padding: 0;
+      scroll-behavior: smooth;
+      transition: background-color 0.5s ease, color 0.5s ease; /* Smooth theme transition */
+    }
+
+    /* Target all utility classes to use new variables */
+    .bg-darker { background-color: var(--color-bg-main) !important; }
+    .bg-dark\/90 { background-color: rgba(15, 23, 42, 0.9) !important; } /* Only navbar needs a fixed shade */
+    .bg-gray-900 { background-color: var(--color-bg-secondary) !important; }
+    .bg-gray-800 { background-color: var(--color-bg-secondary) !important; }
+    .bg-gray-50 { background-color: var(--color-bg-secondary) !important; }
+    .bg-gray-700 { background-color: var(--color-border) !important; }
+    .bg-dark-gray { background-color: var(--color-bg-card) !important; }
+    .bg-dark-gray\/60 { background-color: var(--color-bg-card) !important; }
+    .bg-gray-800\/70 { background-color: var(--color-bg-card) !important; }
+    .border-gray-700 { border-color: var(--color-border) !important; }
+    .border-gray-800 { border-color: var(--color-border) !important; }
+
+    .text-gray { color: var(--color-text-subtle) !important; }
+    .text-gray-400 { color: var(--color-text-subtle) !important; }
+    .text-gray-300 { color: var(--color-text-subtle) !important; }
+    .text-white { color: var(--color-text-main) !important; }
+
+    /* Primary colors */
+    .text-primary { color: var(--color-primary) !important; }
+    .bg-primary { background-color: var(--color-primary) !important; }
+    .hover\:bg-primary-dark:hover { background-color: var(--color-primary-dark) !important; }
+    .border-primary\/50 { border-color: var(--color-primary) !important; }
+
+    /* ===================================================================
+    ✨ COMPONENT STYLES
+    ===================================================================
+    */
+
+    /* Vanta/Hero Background Container */
+    #vanta-bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+    }
+
+    /* Navbar Link Hover Animation (Uses primary color) */
+    .nav-link {
+      position: relative;
+    }
+    .nav-link:after {
+      background-color: var(--color-primary);
+    }
+    .nav-link:hover {
+      color: var(--color-primary) !important;
+    }
+
+    /* Skill Bars (Animated Moving Chart effect) */
+    @keyframes shimmer {
+      0% { background-position: -200% 0; }
+      100% { background-position: 200% 0; }
+    }
+    .skill-bar-container {
+      background: var(--color-border);
+      height: 10px; /* Reduced height for a cleaner look */
+      border-radius: 9999px; /* Full rounded corners */
+      overflow: hidden;
+    }
+    .skill-bar-fill {
+      /* Base gradient for the fill with shimmer effect */
+      background: linear-gradient(90deg, var(--color-primary) 0%, var(--color-primary-dark) 45%, var(--color-primary) 55%, var(--color-primary-dark) 100%);
+      background-size: 200% 100%; /* Wider background for the shimmer effect */
+      transition: width 1s ease-out; /* Existing transition for width on scroll */
+      height: 100%;
+      width: 0; /* Start width at 0 for animation */
+      animation: shimmer 5s linear infinite; /* Subtle continuous movement/shimmer */
+    }
+
+    /* About Section Gradient (Needs to change for light mode) */
+    [data-theme="dark"] #about-bg-gradient {
+      opacity: 0.3;
+      background: radial-gradient(ellipse at center, rgba(59, 130, 246, 0.5) via transparent to transparent);
+    }
+    [data-theme="light"] #about-bg-gradient {
+      opacity: 0.1;
+      background: radial-gradient(ellipse at center, rgba(16, 185, 129, 0.5) via transparent to transparent);
+    }
+
+    /* Footer Border */
+    .border-t.border-gray-800 {
+        border-color: var(--color-border) !important;
+    }
+
+    /* Fix: Ensure text in specific dark-coded elements follows the theme */
+    #projects .text-white {
+        color: var(--color-text-main) !important;
+    }
+    #projects .text-gray-400 {
+        color: var(--color-text-subtle) !important;
+    }
+
+    /* New styles for Certifications cards */
+    .cert-card {
+        border: 1px solid var(--color-border);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .cert-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 15px 30px rgba(59, 130, 246, 0.2); /* Shadow with primary color tint */
+    }
+
+  </style>
 </head>
-<body class="font-sans antialiased text-gray-800">
-    <!-- Navigation -->
-    <nav class="fixed w-full bg-white shadow-sm z-50">
+
+<body class="bg-darker">
+
+    <nav class="fixed w-full bg-dark/90 backdrop-blur-sm shadow-xl z-50 transition duration-500">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-16">
                 <div class="flex items-center">
-                    <span class="text-xl font-bold text-blue-600">DIPAK SHRESTHA</span>
+                    <span class="text-xl font-bold text-primary">DIPAK SHRESTHA</span>
                 </div>
                 <div class="hidden md:flex items-center space-x-8">
-                    <a href="#home" class="nav-link text-gray-700 hover:text-blue-600">Home</a>
-                    <a href="#about" class="nav-link text-gray-700 hover:text-blue-600">About</a>
-                    <a href="#experience" class="nav-link text-gray-700 hover:text-blue-600">Experience</a>
-                    <a href="#skills" class="nav-link text-gray-700 hover:text-blue-600">Skills</a>
-                    <a href="#contact" class="nav-link text-gray-700 hover:text-blue-600">Contact</a>
+                    <a href="#home" class="nav-link text-gray hover:text-primary">Home</a>
+                    <a href="#about" class="nav-link text-gray hover:text-primary">About</a>
+                    <a href="#experience" class="nav-link text-gray hover:text-primary">Experience</a>
+                    <a href="#skills" class="nav-link text-gray hover:text-primary">Skills</a>
+                    <a href="#certifications" class="nav-link text-gray hover:text-primary">Certifications</a>
+                    <a href="#contact" class="nav-link text-gray hover:text-primary">Contact</a>
+                    <button id="theme-toggle-desktop" class="text-gray-300 hover:text-primary p-2 rounded-full transition duration-300">
+                      <i data-feather="sun" class="w-6 h-6"></i>
+                    </button>
                 </div>
-                <div class="md:hidden flex items-center">
-                    <button id="menu-btn" class="text-gray-700">
-                        <i data-feather="menu"></i>
+                <div class="md:hidden flex items-center space-x-4">
+                    <button id="theme-toggle-mobile" class="text-gray-300 hover:text-primary p-1 rounded-full transition duration-300">
+                      <i data-feather="sun" class="w-5 h-5"></i>
+                    </button>
+                    <button id="menu-btn" class="text-gray">
+                        <i data-feather="menu" class="w-6 h-6"></i>
                     </button>
                 </div>
             </div>
         </div>
-        <!-- Mobile menu -->
-        <div id="mobile-menu" class="hidden md:hidden bg-white py-2 px-4 shadow-lg">
-            <a href="#home" class="block py-2 text-gray-700 hover:text-blue-600">Home</a>
-            <a href="#about" class="block py-2 text-gray-700 hover:text-blue-600">About</a>
-            <a href="#experience" class="block py-2 text-gray-700 hover:text-blue-600">Experience</a>
-            <a href="#skills" class="block py-2 text-gray-700 hover:text-blue-600">Skills</a>
-            <a href="#contact" class="block py-2 text-gray-700 hover:text-blue-600">Contact</a>
+        <div id="mobile-menu" class="hidden md:hidden bg-darker/95 backdrop-blur-lg py-2 px-4 shadow-lg transition duration-500">
+            <a href="#home" class="block py-2 text-gray hover:text-primary">Home</a>
+            <a href="#about" class="block py-2 text-gray hover:text-primary">About</a>
+            <a href="#experience" class="block py-2 text-gray hover:text-primary">Experience</a>
+            <a href="#skills" class="block py-2 text-gray hover:text-primary">Skills</a>
+            <a href="#certifications" class="block py-2 text-gray hover:text-primary">Certifications</a>
+            <a href="#contact" class="block py-2 text-gray hover:text-primary">Contact</a>
         </div>
     </nav>
 
-<!-- Hero Section -->
-<section id="home" class="hero-bg min-h-screen flex items-center pt-16">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-      
-      <!-- Left Content -->
-      <div class="text-white">
-        <!-- Headings with staggered animations -->
-        <h1 class="text-4xl md:text-5xl font-bold mb-4 opacity-0 animate-stagger delay-0">
-          Senior Administrator
-        </h1>
+<section id="home" class="relative min-h-screen flex items-center pt-16">
+    <div id="vanta-bg"></div>
 
-        <h2 class="text-2xl md:text-3xl font-semibold mb-6 opacity-0 animate-stagger delay-1">
-          Operations Management Expert
-        </h2>
+    <div class="hero-content-wrapper max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 w-full">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
 
-        <!-- Typing Effect -->
-        <h3 class="text-xl md:text-2xl font-semibold mb-6 opacity-0 animate-stagger delay-2">
-          <span id="typing-text"></span>
-          <span class="text-yellow-400 font-semibold">(In Progress)</span>
-        </h3>
+            <div class="text-white">
+                <h1 class="text-4xl md:text-5xl font-bold mb-4 opacity-0 animate-stagger delay-0">
+                    Senior Administrator
+                </h1>
 
-        <p class="text-lg mb-8 max-w-lg opacity-0 animate-stagger delay-3">
-          Strategic leader with 8+ years of experience optimizing business operations,
-          improving efficiency, and driving organizational success as Dipak Shrestha.
-        </p>
+                <h2 class="text-2xl md:text-3xl font-semibold mb-6 opacity-0 animate-stagger delay-1">
+                    Operations Management Expert
+                </h2>
 
-        <div class="flex space-x-4 opacity-0 animate-stagger delay-4">
-          <a href="#contact" class="bg-white text-blue-600 px-6 py-3 rounded-lg font-medium hover:bg-gray-100 transition duration-300">
-            Get In Touch
-          </a>
-          <a href="#about" class="border border-white text-white px-6 py-3 rounded-lg font-medium hover:bg-white hover:text-blue-600 transition duration-300">
-            Learn More
-          </a>
+                <h3 class="text-xl md:text-2xl font-semibold mb-6 opacity-0 animate-stagger delay-2">
+                    <span id="typing-text"></span>
+                    <span class="text-primary font-semibold">(In Progress)</span>
+                </h3>
+
+                <p class="text-lg mb-8 max-w-lg opacity-0 animate-stagger delay-3 text-gray">
+                    Strategic leader with 8+ years of experience optimizing business operations,
+                    improving efficiency, and driving organizational success.
+                </p>
+
+                <div class="flex space-x-4 opacity-0 animate-stagger delay-4">
+                    <a href="#contact" class="bg-primary text-white px-6 py-3 rounded-lg font-medium hover:bg-primary-dark transition duration-300 shadow-lg hover:shadow-xl">
+                        Get In Touch
+                    </a>
+                    <a href="#about" class="border border-primary text-primary px-6 py-3 rounded-lg font-medium hover:bg-primary hover:text-white transition duration-300 shadow-lg">
+                        Learn More
+                    </a>
+                </div>
+            </div>
+
+            <div class="flex justify-center opacity-0 animate-stagger delay-5">
+                <div class="p-2 rounded-full shadow-2xl floating" style="background-color: var(--color-bg-card);">
+                    <img src="Dipak.JPG" alt="Profile" class="w-64 h-64 md:w-80 md:h-80 rounded-full object-cover border-4 border-primary/50">
+                </div>
+            </div>
+
         </div>
-      </div>
-
-      <!-- Right Image -->
-      <div class="flex justify-center opacity-0 animate-stagger delay-5">
-        <div class="bg-gray-800 p-2 rounded-full shadow-xl floating">
-          <img src="Dipak.JPG" alt="Profile" class="w-64 h-64 md:w-80 md:h-80 rounded-full object-cover">
-        </div>
-      </div>
-
     </div>
-  </div>
 </section>
 
-<!-- Custom Animation CSS -->
 <style>
   @keyframes fadeSlideUp {
     from { opacity: 0; transform: translateY(30px); }
@@ -251,14 +269,12 @@
   .delay-4 { animation-delay: 1.6s; }
   .delay-5 { animation-delay: 2s; }
 
-  /* Floating subtle animation for profile image */
   @keyframes float {
     0%, 100% { transform: translateY(0); }
     50% { transform: translateY(-8px); }
   }
   .floating { animation: float 4s ease-in-out infinite; }
 
-  /* Typing effect cursor */
   #typing-text::after {
     content: '|';
     display: inline-block;
@@ -271,14 +287,12 @@
   }
 </style>
 
-<!-- Typing Effect Script -->
 <script>
   const roles = [
     "Data Analyst",
     "Freelance Web Developer",
     "Freelance App Developer"
   ];
-
   let currentRole = 0;
   let currentChar = 0;
   let isDeleting = false;
@@ -289,7 +303,6 @@
 
   function typeEffect() {
     const role = roles[currentRole];
-    
     if (isDeleting) {
       typingTextElement.textContent = role.substring(0, currentChar--);
       if (currentChar < 0) {
@@ -309,165 +322,192 @@
       }
     }
   }
-
-  document.addEventListener("DOMContentLoaded", () => {
-    setTimeout(typeEffect, 1000); // start typing after fade-in
-  });
+  setTimeout(typeEffect, 1000);
 </script>
 
-    <!-- About Section -->
-    <section id="about" class="py-20 bg-gray-800">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16" data-aos="fade-up">
-                <h2 class="text-3xl font-bold text-gray-900 mb-4">About Me</h2>
-                <div class="w-20 h-1 bg-blue-600 mx-auto"></div>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-                <div data-aos="fade-right">
-                    <img src="image.JPG" alt="About" class="rounded-lg shadow-lg w-full">
-                </div>
-                <div data-aos="fade-left">
-                    <h3 class="text-2xl font-semibold text-gray-800 mb-4">Strategic Operations Leader</h3>
-                    <p class="text-gray-600 mb-6">I am a results-driven Senior Administrator with extensive experience in operations management, process improvement, and team leadership. My expertise lies in developing and implementing strategies that enhance efficiency, reduce costs, and improve overall business performance.</p>
-                    <div class="space-y-4">
-                        <div class="flex items-start">
-                            <div class="bg-blue-100 p-2 rounded-full mr-4">
-                                <i data-feather="target" class="text-blue-600"></i>
-                            </div>
-                            <div>
-                                <h4 class="font-medium text-gray-800">Strategic Planning</h4>
-                                <p class="text-gray-600">Developing comprehensive operational strategies aligned with organizational goals.</p>
-                            </div>
-                        </div>
-                        <div class="flex items-start">
-                            <div class="bg-blue-100 p-2 rounded-full mr-4">
-                                <i data-feather="trending-up" class="text-blue-600"></i>
-                            </div>
-                            <div>
-                                <h4 class="font-medium text-gray-800">Process Optimization</h4>
-                                <p class="text-gray-600">Identifying inefficiencies and implementing solutions to streamline operations.</p>
-                            </div>
-                        </div>
-                        <div class="flex items-start">
-                            <div class="bg-blue-100 p-2 rounded-full mr-4">
-                                <i data-feather="users" class="text-blue-600"></i>
-                            </div>
-                            <div>
-                                <h4 class="font-medium text-gray-800">Team Leadership</h4>
-                                <p class="text-gray-600">Building and mentoring high-performing teams to achieve operational excellence.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- Experience Section -->
-    <section id="experience" class="py-20 bg-gray-800">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16" data-aos="fade-up">
-                <h2 class="text-3xl font-bold text-gray-900 mb-4">Professional Experience</h2>
-                <div class="w-20 h-1 bg-blue-600 mx-auto"></div>
-            </div>
-            <div class="space-y-12">
-                <!-- Experience 1 -->
-                <div class="grid grid-cols-1 md:grid-cols-4 gap-8" data-aos="fade-up">
-                    <div class="md:col-span-1">
-                        <h3 class="text-xl font-semibold text-gray-800">May 2023 – January 2025</h3>
-                        <p class="text-gray-600">Senior Administrator-Business Support</p>
-                    </div>
-                    <div class="md:col-span-3 bg-gray-50 p-6 rounded-lg shadow-sm">
-                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Weone, United Arab Emirates</h3>
-                        <p class="text-gray-600 mb-4">Senior Administrator-Business Support overseeing daily operations and administrative functions.</p>
-                        <ul class="list-disc pl-5 space-y-2 text-gray-600">
-                            <li>Oversee daily administrative functions and operations to ensure efficiency and achieve business goals</li>
-                            <li>Train and mentor new team members to establish best practices and build a cohesive team</li>
-                            <li>Maintain 100% data accuracy in financial reporting to prevent billing errors</li>
-                            <li>Serve as primary contact for clients, resolving issues and maintaining service quality</li>
-                            <li>Provide 24/7 on-call support for emergencies to guarantee continuous service</li>
-                            <li>Contribute to long-term strategic planning and implement workflow adjustments</li>
-                        </ul>
-                    </div>
-                </div>
-                <!-- Experience 2 -->
-                <div class="grid grid-cols-1 md:grid-cols-4 gap-8" data-aos="fade-up">
-                    <div class="md:col-span-1">
-                        <h3 class="text-xl font-semibold text-gray-800">Jan 2022 – April 2023</h3>
-                        <p class="text-gray-600">Senior Administrator</p>
-                    </div>
-                    <div class="md:col-span-3 bg-gray-50 p-6 rounded-lg shadow-sm">
-                        <h3 class="text-xl font-semibold text-gray-800 mb-2">World Security, United Arab Emirates</h3>
-                        <p class="text-gray-600 mb-4">Senior Administrator overseeing daily operations and administrative functions.</p>
-                        <ul class="list-disc pl-5 space-y-2 text-gray-600">
-                            <li>Oversaw daily operations and administrative functions to ensure departmental efficiency</li>
-                            <li>As a founding member of the department, trained and mentored new colleagues</li>
-                            <li>Handling Department Procurement supply and other related work such as invoices, PO, GRN etc.</li>
-                            <li>Maintained 100% data accuracy in financial reporting for 36+ consecutive months</li>
-                            <li>Served as primary point of contact for clients, resolving queries and maintaining KPIs</li>
-                            <li>Provided 24/7 on-call support during emergencies</li>
-                            <li>Contributed to long-term strategic planning and workflow adjustments</li>
-                        </ul>
-                    </div>
-                </div>
-                <!-- Experience 3 -->
-                <div class="grid grid-cols-1 md:grid-cols-4 gap-8" data-aos="fade-up">
-                    <div class="md:col-span-1">
-                        <h3 class="text-xl font-semibold text-gray-800">Sep 2019 – May 2022</h3>
-                        <p class="text-gray-600">Administrator</p>
-                    </div>
-                    <div class="md:col-span-3 bg-gray-50 p-6 rounded-lg shadow-sm">
-                        <h3 class="text-xl font-semibold text-gray-800 mb-2">World Security, Dubai, UAE</h3>
-                        <p class="text-gray-600 mb-4">Managed comprehensive administrative operations for a large workforce.</p>
-                        <ul class="list-disc pl-5 space-y-2 text-gray-600">
-                            <li>Managed administrative operations for 3,000+ employees including scheduling, payroll, and billing</li>
-                            <li>Designed and implemented new rostering system and reporting framework</li>
-                            <li>Directed full employee lifecycle from onboarding to offboarding</li>
-                            <li>Conducted risk analysis and provided operational recommendations</li>
-                            <li>Led HSE coordination and managed COVID-19 response including PPE distribution</li>
-                        </ul>
-                    </div>
-                </div>
-                <!-- Experience 4 -->
-                <div class="grid grid-cols-1 md:grid-cols-4 gap-8" data-aos="fade-up">
-                    <div class="md:col-span-1">
-                        <h3 class="text-xl font-semibold text-gray-800">Mar 2017 – Sep 2019</h3>
-                        <p class="text-gray-600">Security Officer</p>
-                    </div>
-                    <div class="md:col-span-3 bg-gray-50 p-6 rounded-lg shadow-sm">
-                        <h3 class="text-xl font-semibold text-gray-800 mb-2">World Security, Dubai, UAE</h3>
-                        <p class="text-gray-600 mb-4">Ensured safety and security of premises and personnel.</p>
-                        <ul class="list-disc pl-5 space-y-2 text-gray-600">
-                            <li>Maintained safe environment through patrols, monitoring, and inspections</li>
-                            <li>Responded promptly to incidents and emergencies</li>
-                            <li>Coordinated with police and emergency services as required</li>
-                            <li>Provided professional assistance to visitors and staff</li>
-                            <li>Managed access control and maintained visible security presence</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+<section id="about" class="relative py-24 bg-gray-900 overflow-hidden">
+  <div id="about-bg-gradient" class="absolute inset-0 transition duration-500"></div>
 
-    <!-- Skills Section -->
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    <div class="text-center mb-16" data-aos="zoom-in">
+      <h2 class="text-4xl font-extrabold text-white mb-4 tracking-wide">
+        About Me
+      </h2>
+      <div class="w-24 h-1 bg-primary mx-auto rounded-full animate-pulse"></div>
+      <p class="text-gray-400 mt-4 max-w-2xl mx-auto">
+        Passionate professional bridging strategy, operations, and innovation.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+      <div class="relative group" data-aos="fade-right">
+        <div class="absolute -inset-2 bg-gradient-to-r from-primary to-cyan-400 rounded-lg blur opacity-25 group-hover:opacity-60 transition duration-500"></div>
+        <img src="image.JPG" alt="About"
+             class="relative rounded-lg shadow-2xl w-full transform group-hover:scale-[1.02] transition duration-500 ease-in-out">
+      </div>
+
+      <div data-aos="fade-left" data-aos-delay="150">
+        <h3 class="text-3xl font-semibold text-white mb-6 leading-snug">
+          Strategic Operations Leader
+        </h3>
+        <p class="text-gray-300 mb-8 leading-relaxed">
+          I am a results-driven <span class="text-primary font-medium">Senior Administrator</span> with extensive experience in
+          operations management, process improvement, and team leadership. I specialize in developing strategies that
+          enhance efficiency, reduce costs, and elevate business performance across complex organizations.
+        </p>
+
+        <div class="space-y-6">
+          <div class="flex items-start space-x-4 group" data-aos="fade-up" data-aos-delay="200">
+            <div class="bg-primary/20 p-3 rounded-full backdrop-blur-sm group-hover:bg-primary/30 transition duration-300">
+              <i data-feather="target" class="text-primary w-6 h-6"></i>
+            </div>
+            <div>
+              <h4 class="font-semibold text-white mb-1">Strategic Planning</h4>
+              <p class="text-gray-400 text-sm">
+                Developing and executing operational strategies aligned with business goals.
+              </p>
+            </div>
+          </div>
+
+          <div class="flex items-start space-x-4 group" data-aos="fade-up" data-aos-delay="300">
+            <div class="bg-primary/20 p-3 rounded-full backdrop-blur-sm group-hover:bg-primary/30 transition duration-300">
+              <i data-feather="trending-up" class="text-primary w-6 h-6"></i>
+            </div>
+            <div>
+              <h4 class="font-semibold text-white mb-1">Process Optimization</h4>
+              <p class="text-gray-400 text-sm">
+                Identifying inefficiencies and implementing automation to streamline workflows.
+              </p>
+            </div>
+          </div>
+
+          <div class="flex items-start space-x-4 group" data-aos="fade-up" data-aos-delay="400">
+            <div class="bg-primary/20 p-3 rounded-full backdrop-blur-sm group-hover:bg-primary/30 transition duration-300">
+              <i data-feather="users" class="text-primary w-6 h-6"></i>
+            </div>
+            <div>
+              <h4 class="font-medium text-white mb-1">Team Leadership</h4>
+              <p class="text-gray-400 text-sm">
+                Building, mentoring, and inspiring high-performing teams to achieve operational excellence.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-10">
+          <a href="#contact"
+             class="inline-block bg-primary hover:bg-primary-dark text-white font-semibold px-6 py-3 rounded-full shadow-lg transform hover:-translate-y-1 transition duration-300 ease-in-out"
+             data-aos="zoom-in" data-aos-delay="500">
+            Let’s Collaborate
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="experience" class="relative py-24 bg-gray-900 overflow-hidden">
+  <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16" data-aos="fade-down" data-aos-duration="800">
+      <h2 class="text-4xl font-bold text-white mb-4 tracking-wide">Professional Experience</h2>
+      <div class="w-24 h-1 bg-primary mx-auto rounded-full"></div>
+      <p class="text-gray-400 mt-4 text-sm md:text-base">A journey of growth, leadership, and impact</p>
+    </div>
+
+    <div class="space-y-16">
+      <div class="group grid grid-cols-1 md:grid-cols-4 gap-8 items-start transition-all duration-500 hover:scale-[1.01] hover:shadow-2xl"
+           data-aos="fade-right" data-aos-duration="900">
+        <div class="md:col-span-1 text-center md:text-left">
+          <h3 class="text-lg font-semibold text-primary">May 2023 – January 2025</h3>
+          <p class="text-gray-400">Senior Administrator – Business Support</p>
+        </div>
+        <div class="md:col-span-3 bg-gray-800/60 p-8 rounded-2xl shadow-lg border border-gray-700 backdrop-blur-sm transition duration-300" style="background-color: var(--color-bg-card);">
+          <h3 class="text-2xl font-semibold text-white mb-2">We One – United Arab Emirates</h3>
+          <p class="text-gray-400 mb-4">Oversaw business operations, team efficiency, and administrative excellence.</p>
+          <ul class="list-disc pl-5 space-y-2 text-gray-300">
+            <li>Directed daily operations to ensure efficiency and alignment with business goals.</li>
+            <li>Mentored new team members, establishing process excellence.</li>
+            <li>Maintained 100% financial data accuracy and streamlined reporting.</li>
+            <li>Resolved client issues promptly while maintaining service quality.</li>
+            <li>Contributed to long-term planning and workflow optimization.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="group grid grid-cols-1 md:grid-cols-4 gap-8 items-start transition-all duration-500 hover:scale-[1.01]"
+           data-aos="fade-left" data-aos-duration="900">
+        <div class="md:col-span-1 text-center md:text-left">
+          <h3 class="text-lg font-semibold text-primary">Jan 2022 – April 2023</h3>
+          <p class="text-gray-400">Senior Administrator</p>
+        </div>
+        <div class="md:col-span-3 bg-gray-800/60 p-8 rounded-2xl shadow-lg border border-gray-700 transition duration-300" style="background-color: var(--color-bg-card);">
+          <h3 class="text-2xl font-semibold text-white mb-2">World Security – UAE</h3>
+          <p class="text-gray-400 mb-4">Led departmental operations, procurement, and compliance tracking.</p>
+          <ul class="list-disc pl-5 space-y-2 text-gray-300">
+            <li>Improved operational workflows and efficiency.</li>
+            <li>Trained and mentored junior administrators.</li>
+            <li>Handled procurement, invoices, and GRN systems with accuracy.</li>
+            <li>Maintained consistent KPI performance and 100% accuracy.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="group grid grid-cols-1 md:grid-cols-4 gap-8 items-start transition-all duration-500 hover:scale-[1.01]"
+           data-aos="fade-right" data-aos-duration="900">
+        <div class="md:col-span-1 text-center md:text-left">
+          <h3 class="text-lg font-semibold text-primary">Sep 2019 – May 2022</h3>
+          <p class="text-gray-400">Administrator</p>
+        </div>
+        <div class="md:col-span-3 bg-gray-800/60 p-8 rounded-2xl shadow-lg border border-gray-700 transition duration-300" style="background-color: var(--color-bg-card);">
+          <h3 class="text-2xl font-semibold text-white mb-2">World Security – Dubai</h3>
+          <p class="text-gray-400 mb-4">Managed 3,000+ employees’ schedules, payroll, and compliance.</p>
+          <ul class="list-disc pl-5 space-y-2 text-gray-300">
+            <li>Implemented advanced rostering and reporting systems.</li>
+            <li>Oversaw full employee lifecycle management.</li>
+            <li>Coordinated HSE operations and COVID-19 response measures.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="group grid grid-cols-1 md:grid-cols-4 gap-8 items-start transition-all duration-500 hover:scale-[1.01]"
+           data-aos="fade-left" data-aos-duration="900">
+        <div class="md:col-span-1 text-center md:text-left">
+          <h3 class="text-lg font-semibold text-primary">Mar 2017 – Sep 2019</h3>
+          <p class="text-gray-400">Security Officer</p>
+        </div>
+        <div class="md:col-span-3 bg-gray-800/60 p-8 rounded-2xl shadow-lg border border-gray-700 transition duration-300" style="background-color: var(--color-bg-card);">
+          <h3 class="text-2xl font-semibold text-white mb-2">World Security – Dubai</h3>
+          <p class="text-gray-400 mb-4">Maintained safety and operational stability of high-profile facilities.</p>
+          <ul class="list-disc pl-5 space-y-2 text-gray-300">
+            <li>Executed regular patrols and emergency response protocols.</li>
+            <li>Ensured compliance with safety regulations and procedures.</li>
+            <li>Collaborated with emergency services during critical incidents.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section id="skills" class="py-20 bg-gray-800">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="text-center mb-16" data-aos="fade-up">
       <h2 class="text-3xl font-bold text-white mb-4">Core Competencies</h2>
-      <div class="w-20 h-1 bg-blue-600 mx-auto"></div>
+      <div class="w-20 h-1 bg-primary mx-auto"></div>
     </div>
 
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-      <!-- Progress Bars Left -->
-      <div data-aos="fade-right">
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+
+      <div class="md:col-span-2" data-aos="fade-right" data-aos-duration="1000">
+        <h3 class="text-xl font-semibold text-white mb-6 animate-bounce-in">Operations & Strategy</h3>
         <div class="mb-8">
           <div class="flex justify-between mb-2">
             <span class="font-medium text-white">Strategic Planning</span>
             <span class="text-gray-300">95%</span>
           </div>
-          <div class="w-full bg-gray-700 rounded-full h-2.5">
-            <div class="skill-bar bg-blue-600 h-2.5 rounded-full" style="width: 95%"></div>
+          <div class="skill-bar-container w-full rounded-full">
+            <div class="skill-bar-fill" data-skill-level="95%"></div>
           </div>
         </div>
         <div class="mb-8">
@@ -475,8 +515,8 @@
             <span class="font-medium text-white">Process Improvement</span>
             <span class="text-gray-300">90%</span>
           </div>
-          <div class="w-full bg-gray-700 rounded-full h-2.5">
-            <div class="skill-bar bg-blue-600 h-2.5 rounded-full" style="width: 90%"></div>
+          <div class="skill-bar-container w-full rounded-full">
+            <div class="skill-bar-fill" data-skill-level="90%"></div>
           </div>
         </div>
         <div class="mb-8">
@@ -484,21 +524,8 @@
             <span class="font-medium text-white">Team Leadership</span>
             <span class="text-gray-300">92%</span>
           </div>
-          <div class="w-full bg-gray-700 rounded-full h-2.5">
-            <div class="skill-bar bg-blue-600 h-2.5 rounded-full" style="width: 92%"></div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Progress Bars Right -->
-      <div data-aos="fade-left">
-        <div class="mb-8">
-          <div class="flex justify-between mb-2">
-            <span class="font-medium text-white">Budget Management</span>
-            <span class="text-gray-300">88%</span>
-          </div>
-          <div class="w-full bg-gray-700 rounded-full h-2.5">
-            <div class="skill-bar bg-blue-600 h-2.5 rounded-full" style="width: 88%"></div>
+          <div class="skill-bar-container w-full rounded-full">
+            <div class="skill-bar-fill" data-skill-level="92%"></div>
           </div>
         </div>
         <div class="mb-8">
@@ -506,156 +533,202 @@
             <span class="font-medium text-white">Project Management</span>
             <span class="text-gray-300">93%</span>
           </div>
-          <div class="w-full bg-gray-700 rounded-full h-2.5">
-            <div class="skill-bar bg-blue-600 h-2.5 rounded-full" style="width: 93%"></div>
+          <div class="skill-bar-container w-full rounded-full">
+            <div class="skill-bar-fill" data-skill-level="93%"></div>
           </div>
         </div>
         <div class="mb-8">
           <div class="flex justify-between mb-2">
-            <span class="font-medium text-white">Data Analysis</span>
-            <span class="text-gray-300">85%</span>
+            <span class="font-medium text-white">Budget Management</span>
+            <span class="text-gray-300">88%</span>
           </div>
-          <div class="w-full bg-gray-700 rounded-full h-2.5">
-            <div class="skill-bar bg-blue-600 h-2.5 rounded-full" style="width: 85%"></div>
+          <div class="skill-bar-container w-full rounded-full">
+            <div class="skill-bar-fill" data-skill-level="88%"></div>
           </div>
         </div>
       </div>
 
-      <!-- Technical Skills -->
-      <div data-aos="fade-up">
-        <h3 class="text-xl font-semibold text-white mb-6">Technical Skills</h3>
+      <div class="md:col-span-2" data-aos="fade-left" data-aos-duration="1000">
+        <h3 class="text-xl font-semibold text-white mb-6">Technical Ecosystem</h3>
         <div class="space-y-4">
-          <div class="flex items-center">
-            <div class="bg-blue-100 p-2 rounded-full mr-4">
-              <i data-feather="code" class="text-blue-600"></i>
+
+          <div class="flex items-center group p-3 rounded-lg border border-gray-700 shadow-lg transition duration-300" style="background-color: var(--color-bg-card);">
+            <div class="bg-primary/20 p-2 rounded-full mr-4 group-hover:bg-primary/30 transition">
+              <i data-feather="terminal" class="text-primary"></i>
             </div>
             <div>
               <h4 class="font-medium text-white">Programming & Databases</h4>
-              <p class="text-gray-400">Python, SQL, Oracle, Database Management Systems</p>
+              <p class="text-gray-400 text-sm">Python, SQL, Oracle, Database Management Systems</p>
             </div>
           </div>
-          <div class="flex items-center">
-            <div class="bg-blue-100 p-2 rounded-full mr-4">
-              <i data-feather="globe" class="text-blue-600"></i>
-            </div>
-            <div>
-              <h4 class="font-medium text-white">Web Development</h4>
-              <p class="text-gray-400">HTML, CSS, JavaScript, React, Tailwind CSS</p>
-            </div>
-          </div>
-          <div class="flex items-center">
-            <div class="bg-blue-100 p-2 rounded-full mr-4">
-              <i data-feather="monitor" class="text-blue-600"></i>
-            </div>
-            <div>
-              <h4 class="font-medium text-white">Productivity Suites</h4>
-              <p class="text-gray-400">Microsoft Office, Google Workspace</p>
-            </div>
-          </div>
-          <div class="flex items-center">
-            <div class="bg-blue-100 p-2 rounded-full mr-4">
-              <i data-feather="message-square" class="text-blue-600"></i>
-            </div>
-            <div>
-              <h4 class="font-medium text-white">Collaboration Tools</h4>
-              <p class="text-gray-400">Slack, Microsoft Teams</p>
-            </div>
-          </div>
-          <div class="flex items-center">
-            <div class="bg-blue-100 p-2 rounded-full mr-4">
-              <i data-feather="bar-chart-2" class="text-blue-600"></i>
-            </div>
-            <div>
-              <h4 class="font-medium text-white">Data Analysis</h4>
-              <p class="text-gray-400">Power BI, Tableau, Data Visualization</p>
-            </div>
-          </div>
-          <div class="flex items-center">
-            <div class="bg-blue-100 p-2 rounded-full mr-4">
-              <i data-feather="cpu" class="text-blue-600"></i>
-            </div>
-            <div>
-              <h4 class="font-medium text-white">ERP Systems</h4>
-              <p class="text-gray-400">SAP, Oracle ERP</p>
-            </div>
-          </div>
-          <div class="flex items-center">
-            <div class="bg-blue-100 p-2 rounded-full mr-4">
-              <i data-feather="tool" class="text-blue-600"></i>
-            </div>
-            <div>
-              <h4 class="font-medium text-white">IT Skills</h4>
-              <p class="text-gray-400">System Administration, Basic Troubleshooting</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
 
-    <!-- Extra Highlights -->
-    <div class="mt-12 grid grid-cols-2 md:grid-cols-4 gap-6" data-aos="fade-up">
-      <div class="bg-white p-6 rounded-lg shadow-sm text-center">
-        <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-          <i data-feather="dollar-sign" class="text-blue-600"></i>
+          <div class="flex items-center group p-3 rounded-lg border border-gray-700 shadow-lg transition duration-300" style="background-color: var(--color-bg-card);">
+            <div class="bg-primary/20 p-2 rounded-full mr-4 group-hover:bg-primary/30 transition">
+              <i data-feather="bar-chart-2" class="text-primary"></i>
+            </div>
+            <div>
+              <h4 class="font-medium text-white">Data Visualization & BI</h4>
+              <p class="text-gray-400 text-sm">Power BI, Tableau, Advanced Data Analysis</p>
+            </div>
+          </div>
+
+          <div class="flex items-center group p-3 rounded-lg border border-gray-700 shadow-lg transition duration-300" style="background-color: var(--color-bg-card);">
+            <div class="bg-primary/20 p-2 rounded-full mr-4 group-hover:bg-primary/30 transition">
+              <i data-feather="layers" class="text-primary"></i>
+            </div>
+            <div>
+              <h4 class="font-medium text-white">ERP & Administration</h4>
+              <p class="text-gray-400 text-sm">SAP, Oracle ERP, ZOHO Desk, System Administration</p>
+            </div>
+          </div>
+
+          <div class="flex items-center group p-3 rounded-lg border border-gray-700 shadow-lg transition duration-300" style="background-color: var(--color-bg-card);">
+            <div class="bg-primary/20 p-2 rounded-full mr-4 group-hover:bg-primary/30 transition">
+              <i data-feather="code" class="text-primary"></i>
+            </div>
+            <div>
+              <h4 class="font-medium text-white">Web Development (In Progress)</h4>
+              <p class="text-gray-400 text-sm">HTML, CSS, JavaScript, React, Tailwind CSS</p>
+            </div>
+          </div>
+
+          <div class="flex items-center group p-3 rounded-lg border border-gray-700 shadow-lg transition duration-300" style="background-color: var(--color-bg-card);">
+            <div class="bg-primary/20 p-2 rounded-full mr-4 group-hover:bg-primary/30 transition">
+              <i data-feather="refresh-cw" class="text-primary"></i>
+            </div>
+            <div>
+              <h4 class="font-medium text-white">Process & Automation Tools</h4>
+              <p class="text-gray-400 text-sm">Advanced Excel/Sheets, Workflow Automation, RPA Concepts</p>
+            </div>
+          </div>
         </div>
-        <h4 class="font-medium text-gray-800">Cost Reduction</h4>
-        <p class="text-gray-600 mt-2">Implemented cost-saving measures across operations</p>
       </div>
-      <div class="bg-white p-6 rounded-lg shadow-sm text-center">
-        <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-          <i data-feather="bar-chart-2" class="text-blue-600"></i>
-        </div>
-        <h4 class="font-medium text-gray-800">Performance Metrics</h4>
-        <p class="text-gray-600 mt-2">Developed KPIs that drive accountability and results</p>
+
+      <div class="md:col-span-4 pt-8 border-t border-gray-700 mt-8">
+          <h3 class="text-xl font-semibold text-white mb-6">Key Professional Focus</h3>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+
+            <div class="bg-dark-gray/60 p-6 rounded-xl shadow-md transition duration-300 hover:shadow-primary/40 hover:scale-[1.02] cursor-pointer" style="background-color: var(--color-bg-card);" data-aos="zoom-in" data-aos-delay="100">
+              <div class="flex items-center mb-2">
+                  <i data-feather="dollar-sign" class="text-primary w-5 h-5 mr-3"></i>
+                  <h4 class="font-semibold text-white">Cost Reduction Initiatives</h4>
+              </div>
+              <p class="text-gray-400 text-sm">Successfully implemented process and procurement measures leading to measurable cost savings across departments.</p>
+            </div>
+
+            <div class="bg-dark-gray/60 p-6 rounded-xl shadow-md transition duration-300 hover:shadow-primary/40 hover:scale-[1.02] cursor-pointer" style="background-color: var(--color-bg-card);" data-aos="zoom-in" data-aos-delay="200">
+              <div class="flex items-center mb-2">
+                  <i data-feather="bar-chart-2" class="text-primary w-5 h-5 mr-3"></i>
+              <h4 class="font-semibold text-white">KPI & Reporting Excellence</h4>
+              </div>
+              <p class="text-gray-400 text-sm">Designed and enforced KPIs and accurate reporting structures to drive accountability and data-driven decisions.</p>
+            </div>
+
+            <div class="bg-dark-gray/60 p-6 rounded-xl shadow-md transition duration-300 hover:shadow-primary/40 hover:scale-[1.02] cursor-pointer" style="background-color: var(--color-bg-card);" data-aos="zoom-in" data-aos-delay="300">
+              <div class="flex items-center mb-2">
+                  <i data-feather="users" class="text-primary w-5 h-5 mr-3"></i>
+              <h4 class="font-semibold text-white">High-Volume Team Management</h4>
+              </div>
+              <p class="text-gray-400 text-sm">Managed complex administrative tasks for large workforces (3,000+ employees), including scheduling and payroll.</p>
+            </div>
+
+            <div class="bg-dark-gray/60 p-6 rounded-xl shadow-md transition duration-300 hover:shadow-primary/40 hover:scale-[1.02] cursor-pointer" style="background-color: var(--color-bg-card);" data-aos="zoom-in" data-aos-delay="400">
+              <div class="flex items-center mb-2">
+                  <i data-feather="award" class="text-primary w-5 h-5 mr-3"></i>
+              <h4 class="font-semibold text-white">Compliance & Governance</h4>
+              </div>
+              <p class="text-gray-400 text-sm">Ensured 100% compliance with financial data and company policies, minimizing audit risk and establishing governance.</p>
+            </div>
+          </div>
       </div>
-      <div class="bg-white p-6 rounded-lg shadow-sm text-center">
-        <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-          <i data-feather="refresh-cw" class="text-blue-600"></i>
-        </div>
-        <h4 class="font-medium text-gray-800">Continuous Improvement</h4>
-        <p class="text-gray-600 mt-2">Implemented Lean and Six Sigma methodologies</p>
-      </div>
-      <div class="bg-white p-6 rounded-lg shadow-sm text-center">
-        <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-          <i data-feather="users" class="text-blue-600"></i>
-        </div>
-        <h4 class="font-medium text-gray-800">Stakeholder Management</h4>
-        <p class="text-gray-600 mt-2">Strong relationships across all organizational levels</p>
-      </div>
+
     </div>
   </div>
 </section>
 
-   <!-- Projects Section -->
-<section id="projects" class="py-20 bg-gray-800">
+<section id="certifications" class="py-24 bg-gray-900 overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16" data-aos="fade-down">
+            <h2 class="text-4xl font-bold text-white mb-4 tracking-wide">Certifications & Training</h2>
+            <div class="w-24 h-1 bg-primary mx-auto rounded-full"></div>
+            <p class="text-gray-400 mt-4 max-w-2xl mx-auto">Commitment to continuous learning and technical upskilling.</p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+
+            <div class="cert-card p-6 rounded-xl shadow-lg cursor-pointer" style="background-color: var(--color-bg-card);" data-aos="zoom-in" data-aos-delay="50">
+                <i data-feather="file-text" class="text-primary w-8 h-8 mb-4"></i>
+                <h4 class="font-semibold text-white text-lg">Basic Powerpoint</h4>
+            </div>
+
+            <div class="cert-card p-6 rounded-xl shadow-lg cursor-pointer" style="background-color: var(--color-bg-card);" data-aos="zoom-in" data-aos-delay="150">
+                <i data-feather="file" class="text-primary w-8 h-8 mb-4"></i>
+                <h4 class="font-semibold text-white text-lg">Basic Excel</h4>
+            </div>
+
+            <div class="cert-card p-6 rounded-xl shadow-lg cursor-pointer" style="background-color: var(--color-bg-card);" data-aos="zoom-in" data-aos-delay="250">
+                <i data-feather="monitor" class="text-primary w-8 h-8 mb-4"></i>
+                <h4 class="font-semibold text-white text-lg">Advance Powerpoint</h4>
+            </div>
+
+            <div class="cert-card p-6 rounded-xl shadow-lg cursor-pointer" style="background-color: var(--color-bg-card);" data-aos="zoom-in" data-aos-delay="350">
+                <i data-feather="clipboard" class="text-primary w-8 h-8 mb-4"></i>
+                <h4 class="font-semibold text-white text-lg">Advance Excel</h4>
+            </div>
+
+            <div class="cert-card p-6 rounded-xl shadow-lg cursor-pointer" style="background-color: var(--color-bg-card);" data-aos="zoom-in" data-aos-delay="450">
+                <i data-feather="bar-chart-2" class="text-primary w-8 h-8 mb-4"></i>
+                <h4 class="font-semibold text-white text-lg">Data Analyst 101 by Microsoft</h4>
+            </div>
+
+            <div class="cert-card p-6 rounded-xl shadow-lg cursor-pointer" style="background-color: var(--color-bg-card);" data-aos="zoom-in" data-aos-delay="650">
+                <i data-feather="database" class="text-primary w-8 h-8 mb-4"></i>
+                <h4 class="font-semibold text-white text-lg">SQL Analytics and Business Intelligence on Databricks</h4>
+            </div>
+
+            <div class="cert-card p-6 rounded-xl shadow-lg cursor-pointer" style="background-color: var(--color-bg-card);" data-aos="zoom-in" data-aos-delay="750">
+                <i data-feather="zap" class="text-primary w-8 h-8 mb-4"></i>
+                <h4 class="font-semibold text-white text-lg">Digital Transformation</h4>
+            </div>
+
+            <div class="cert-card p-6 rounded-xl shadow-lg cursor-pointer" style="background-color: var(--color-bg-card);" data-aos="zoom-in" data-aos-delay="850">
+                <i data-feather="briefcase" class="text-primary w-8 h-8 mb-4"></i>
+                <h4 class="font-semibold text-white text-lg">Business Analysis Basic</h4>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section id="projects" class="py-20 bg-gray-900">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="text-center mb-16" data-aos="fade-up">
-      <h2 class="text-3xl font-bold text-gray-900 mb-4">Projects & Dashboards</h2>
-      <div class="w-20 h-1 bg-blue-600 mx-auto"></div>
+      <h2 class="text-3xl font-bold text-white mb-4">Projects & Dashboards</h2>
+      <div class="w-20 h-1 bg-primary mx-auto"></div>
+      <p class="text-gray-400 mt-4 max-w-2xl mx-auto">Showcasing data-driven insights and operational tooling.</p>
     </div>
-    <div class="project-grid">
-
-      <!-- Project 1 -->
-      <a href="https://github.com/Dipakshrestha2" target="_blank" class="block transform transition duration-300 hover:scale-105">
-        <div class="bg-black rounded-xl overflow-hidden card-hover" data-aos="fade-up" data-aos-delay="200">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        
+      <a href="https://github.com/Dipakshrestha2" target="_blank" class="block transform transition duration-300 hover:scale-[1.03]">
+        <div class="bg-dark-gray rounded-xl overflow-hidden shadow-xl" data-aos="fade-up" data-aos-delay="100" style="background-color: var(--color-bg-card);">
           <div class="h-48 overflow-hidden">
             <img src="Screenshot 2025-09-21 at 09.44.28.JPG" alt="Sales Dashboard Screenshot" class="w-full h-full object-cover">
           </div>
           <div class="p-6">
-            <h3 class="text-xl font-semibold text-white mb-2">Sales Dashboard</h3>
+            <h3 class="text-xl font-semibold text-white mb-2">Sales Dashboard (Power BI)</h3>
             <p class="text-gray-400 mb-4">Interactive Power BI dashboard tracking monthly revenue and regional performance.</p>
             <div class="flex flex-wrap gap-2">
-              <span class="px-3 py-1 bg-gray-800 text-gray-300 text-xs rounded-full">Identify Trends & Opportunities</span>
-              <span class="px-3 py-1 bg-gray-800 text-gray-300 text-xs rounded-full">Improve Efficiency</span>
-              <span class="px-3 py-1 bg-gray-800 text-gray-300 text-xs rounded-full">Make Data-Driven Decisions</span>
+              <span class="px-3 py-1 bg-gray-700 text-gray-300 text-xs rounded-full" style="background-color: var(--color-border);">Identify Trends & Opportunities</span>
+              <span class="px-3 py-1 bg-gray-700 text-gray-300 text-xs rounded-full" style="background-color: var(--color-border);">Improve Efficiency</span>
+              <span class="px-3 py-1 bg-gray-700 text-gray-300 text-xs rounded-full" style="background-color: var(--color-border);">Make Data-Driven Decisions</span>
             </div>
           </div>
         </div>
       </a>
 
-      <!-- Project 2 -->
-      <a href="https://github.com/Dipakshrestha2" target="_blank" class="block transform transition duration-300 hover:scale-105">
-        <div class="bg-black rounded-xl overflow-hidden card-hover" data-aos="fade-up" data-aos-delay="200">
+      <a href="https://github.com/Dipakshrestha2" target="_blank" class="block transform transition duration-300 hover:scale-[1.03]">
+        <div class="bg-dark-gray rounded-xl overflow-hidden shadow-xl" data-aos="fade-up" data-aos-delay="200" style="background-color: var(--color-bg-card);">
           <div class="h-48 overflow-hidden">
             <img src="http://static.photos/office/640x360/67" alt="ZOHO Desk Implementation" class="w-full h-full object-cover">
           </div>
@@ -663,17 +736,16 @@
             <h3 class="text-xl font-semibold text-white mb-2">ZOHO Desk Implementation</h3>
             <p class="text-gray-400 mb-4">Spearheaded ZOHO Desk setup and training for admin/welfare assistants to handle employee grievances & helpdesk tickets efficiently.</p>
             <div class="flex flex-wrap gap-2">
-              <span class="px-3 py-1 bg-gray-800 text-gray-300 text-xs rounded-full">ZOHO</span>
-              <span class="px-3 py-1 bg-gray-800 text-gray-300 text-xs rounded-full">Helpdesk</span>
-              <span class="px-3 py-1 bg-gray-800 text-gray-300 text-xs rounded-full">Training</span>
+              <span class="px-3 py-1 bg-gray-700 text-gray-300 text-xs rounded-full" style="background-color: var(--color-border);">ZOHO</span>
+              <span class="px-3 py-1 bg-gray-700 text-gray-300 text-xs rounded-full" style="background-color: var(--color-border);">Helpdesk</span>
+              <span class="px-3 py-1 bg-gray-700 text-gray-300 text-xs rounded-full" style="background-color: var(--color-border);">Training</span>
             </div>
           </div>
         </div>
       </a>
 
-      <!-- Project 3 -->
-      <a href="https://github.com/Dipakshrestha2" target="_blank" class="block transform transition duration-300 hover:scale-105">
-        <div class="bg-black rounded-xl overflow-hidden card-hover" data-aos="fade-up" data-aos-delay="200">
+      <a href="https://github.com/Dipakshrestha2" target="_blank" class="block transform transition duration-300 hover:scale-[1.03]">
+        <div class="bg-dark-gray rounded-xl overflow-hidden shadow-xl" data-aos="fade-up" data-aos-delay="300" style="background-color: var(--color-bg-card);">
           <div class="h-48 overflow-hidden">
             <img src="Screenshot 2025-09-21 at 18.04.20.png" alt="Monthly Productivity Reports" class="w-full h-full object-cover">
           </div>
@@ -681,66 +753,58 @@
             <h3 class="text-xl font-semibold text-white mb-2">Monthly Productivity Reports</h3>
             <p class="text-gray-400 mb-4">Acknowledges top performers and sets clear goals for improvement.</p>
             <div class="flex flex-wrap gap-2">
-              <span class="px-3 py-1 bg-gray-800 text-gray-300 text-xs rounded-full">Improving Efficiency</span>
-              <span class="px-3 py-1 bg-gray-800 text-gray-300 text-xs rounded-full">Tracking Progress</span>
-              <span class="px-3 py-1 bg-gray-800 text-gray-300 text-xs rounded-full">Training</span>
-              <span class="px-3 py-1 bg-gray-800 text-gray-300 text-xs rounded-full">Informing Decisions</span>
+              <span class="px-3 py-1 bg-gray-700 text-gray-300 text-xs rounded-full" style="background-color: var(--color-border);">Improving Efficiency</span>
+              <span class="px-3 py-1 bg-gray-700 text-gray-300 text-xs rounded-full" style="background-color: var(--color-border);">Informing Decisions</span>
+              <span class="px-3 py-1 bg-gray-700 text-gray-300 text-xs rounded-full" style="background-color: var(--color-border);">Training</span>
+              <span class="px-3 py-1 bg-gray-700 text-gray-300 text-xs rounded-full" style="background-color: var(--color-border);">Tracking Progress</span>
             </div>
           </div>
         </div>
       </a>
-
-      <!-- Project 4 -->
-      <a href="https://parasreshammiya2-debug.github.io/parasreshammiya2.github.io/" target="_blank" class="block transform transition duration-300 hover:scale-105">
-        <div class="bg-black rounded-xl overflow-hidden card-hover" data-aos="fade-up" data-aos-delay="200">
+      
+      <a href="https://parasreshammiya2-debug.github.io/parasreshammiya2.github.io/" target="_blank" class="block transform transition duration-300 hover:scale-[1.03]">
+        <div class="bg-dark-gray rounded-xl overflow-hidden shadow-xl" data-aos="fade-up" data-aos-delay="400" style="background-color: var(--color-bg-card);">
           <div class="h-48 overflow-hidden">
             <img src="Website_Portfolio.jpg" alt="Portfolio Website Project" class="w-full h-full object-cover">
           </div>
           <div class="p-6">
-            <h3 class="text-xl font-semibold text-white mb-2">Portfolio Website</h3>
-            <p class="text-gray-400 mb-4">A modern and responsive personal portfolio website showcasing skills, projects, and achievements with interactive animations.</p>
+            <h3 class="text-xl font-semibold text-white mb-2">Portfolio Website (HTML/Tailwind)</h3>
+            <p class="text-gray-400 mb-4">A modern, responsive portfolio demonstrating Web Development skills and personal branding.</p>
             <div class="flex flex-wrap gap-2">
-              <span class="px-3 py-1 bg-gray-800 text-gray-300 text-xs rounded-full">Responsive Design</span>
-              <span class="px-3 py-1 bg-gray-800 text-gray-300 text-xs rounded-full">Animations</span>
-              <span class="px-3 py-1 bg-gray-800 text-gray-300 text-xs rounded-full">Professional UI/UX</span>
-              <span class="px-3 py-1 bg-gray-800 text-gray-300 text-xs rounded-full">Personal Branding</span>
+              <span class="px-3 py-1 bg-gray-700 text-gray-300 text-xs rounded-full" style="background-color: var(--color-border);">Tailwind CSS</span>
+              <span class="px-3 py-1 bg-gray-700 text-gray-300 text-xs rounded-full" style="background-color: var(--color-border);">Professional UI/UX</span>
             </div>
           </div>
         </div>
       </a>
 
-      <!-- Project 5 -->
-      <a href="https://github.com/Dipakshrestha2/" target="_blank" class="block transform transition duration-300 hover:scale-105">
-        <div class="bg-black rounded-xl overflow-hidden card-hover" data-aos="fade-up" data-aos-delay="200">
+      <a href="https://github.com/Dipakshrestha2/" target="_blank" class="block transform transition duration-300 hover:scale-[1.03]">
+        <div class="bg-dark-gray rounded-xl overflow-hidden shadow-xl" data-aos="fade-up" data-aos-delay="500" style="background-color: var(--color-bg-card);">
           <div class="h-48 overflow-hidden">
             <img src="modern Data analytical dashboard.jpg" alt="data analytical dashboard" class="w-full h-full object-cover">
           </div>
           <div class="p-6">
-            <h3 class="text-xl font-semibold text-white mb-1">data analytical dashboard</h3>
-            <p class="text-gray-400 mb-4">A responsive and interactive data analytical dashboard designed for all devices.</p>
+            <h3 class="text-xl font-semibold text-white mb-1">Modern Data Analytical Dashboard</h3>
+            <p class="text-gray-400 mb-4">A responsive and interactive dashboard providing actional insights for operational strategy.</p>
             <div class="flex flex-wrap gap-2">
-              <span class="px-3 py-1 bg-gray-800 text-gray-300 text-xs rounded-full">Responsive</span>
-              <span class="px-3 py-1 bg-gray-800 text-gray-300 text-xs rounded-full">Animated Interactions</span>
-              <span class="px-3 py-1 bg-gray-800 text-gray-300 text-xs rounded-full">Actionable Insights</span>
+              <span class="px-3 py-1 bg-gray-700 text-gray-300 text-xs rounded-full" style="background-color: var(--color-border);">Responsive Design</span>
+              <span class="px-3 py-1 bg-gray-700 text-gray-300 text-xs rounded-full" style="background-color: var(--color-border);">Actionable Insights</span>
             </div>
           </div>
         </div>
       </a>
 
-      <!-- Project 6 -->
-      <a href="https://github.com/Dipakshrestha2" target="_blank" class="block transform transition duration-300 hover:scale-105">
-        <div class="bg-black rounded-xl overflow-hidden card-hover" data-aos="fade-up" data-aos-delay="200">
+      <a href="https://github.com/Dipakshrestha2" target="_blank" class="block transform transition duration-300 hover:scale-[1.03]">
+        <div class="bg-dark-gray rounded-xl overflow-hidden shadow-xl" data-aos="fade-up" data-aos-delay="600" style="background-color: var(--color-bg-card);">
           <div class="h-48 overflow-hidden">
             <img src="dashboard_customer.jpg" alt="Tableau Dashboard Screenshot" class="w-full h-full object-cover">
           </div>
           <div class="p-6">
-            <h3 class="text-xl font-semibold text-white mb-2">Customer Insights Dashboard</h3>
-            <p class="text-gray-400 mb-4">Tableau dashboard analyzing customer segmentation and churn rates.</p>
+            <h3 class="text-xl font-semibold text-white mb-2">Customer Insights Dashboard (Tableau)</h3>
+            <p class="text-gray-400 mb-4">Tableau dashboard analyzing customer segmentation and churn rates for targeted strategy.</p>
             <div class="flex flex-wrap gap-2">
-              <span class="px-3 py-1 bg-gray-800 text-gray-300 text-xs rounded-full">Targeted Marketing</span>
-              <span class="px-3 py-1 bg-gray-800 text-gray-300 text-xs rounded-full">Customer Value Analysis</span>
-              <span class="px-3 py-1 bg-gray-800 text-gray-300 text-xs rounded-full">Enhanced Customer Experience</span>
-              <span class="px-3 py-1 bg-gray-800 text-gray-300 text-xs rounded-full">Predictive Churn</span>
+              <span class="px-3 py-1 bg-gray-700 text-gray-300 text-xs rounded-full" style="background-color: var(--color-border);">Tableau</span>
+              <span class="px-3 py-1 bg-gray-700 text-gray-300 text-xs rounded-full" style="background-color: var(--color-border);">Predictive Analytics</span>
             </div>
           </div>
         </div>
@@ -750,118 +814,99 @@
   </div>
 </section>
 
-    <!-- Testimonials Section -->
-    <section class="py-20 bg-gray-800">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16" data-aos="fade-up">
-                <h2 class="text-3xl font-bold text-gray-900 mb-4">Technical Expertise</h2>
-                <div class="w-20 h-1 bg-blue-600 mx-auto"></div>
-                <p class="text-gray-600 mt-6 max-w-2xl mx-auto">Proficient in leveraging technology to streamline operations and enhance business performance.</p>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="bg-gray-50 p-8 rounded-lg" data-aos="fade-up">
-                    <div class="flex items-center mb-4">
-                        <div class="bg-blue-100 p-3 rounded-full mr-4">
-                            <i data-feather="database" class="text-blue-600"></i>
-                        </div>
-                        <h3 class="text-xl font-semibold text-gray-800">Database Management</h3>
-                    </div>
-                    <p class="text-gray-600">Experienced in Oracle, SQL Server, and MySQL for efficient data organization and retrieval. Skilled in writing complex queries and optimizing database performance.</p>
-                </div>
-                <div class="bg-gray-50 p-8 rounded-lg" data-aos="fade-up" data-aos-delay="100">
-                    <div class="flex items-center mb-4">
-                        <div class="bg-blue-100 p-3 rounded-full mr-4">
-                            <i data-feather="pie-chart" class="text-blue-600"></i>
-                        </div>
-                        <h3 class="text-xl font-semibold text-gray-800">Data Analysis</h3>
-                    </div>
-                    <p class="text-gray-600">Proficient in Power BI and Tableau for transforming raw data into actionable insights. Able to create comprehensive dashboards and reports for strategic decision-making.</p>
-                </div>
-                <div class="bg-gray-50 p-8 rounded-lg" data-aos="fade-up" data-aos-delay="200">
-                    <div class="flex items-center mb-4">
-                        <div class="bg-blue-100 p-3 rounded-full mr-4">
-                            <i data-feather="settings" class="text-blue-600"></i>
-                        </div>
-                        <h3 class="text-xl font-semibold text-gray-800">ERP Systems</h3>
-                    </div>
-                    <p class="text-gray-600">Extensive experience implementing and managing Oracle and SAP ERP solutions to integrate business processes and improve operational efficiency.</p>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- Contact -->
-<section id="contact" class="py-20 bg-gray-800">
-  <div class="max-w-6xl mx-auto px-6">
-    <h2 class="text-3xl font-bold text-center mb-12 text-white">Get In Touch</h2>
+<section id="contact" class="relative py-24 bg-gray-800 overflow-hidden">
+  <div class="relative max-w-6xl mx-auto px-6">
+    <div class="text-center mb-16" data-aos="fade-down" data-aos-duration="800">
+      <h2 class="text-4xl font-bold text-white mb-4 tracking-wide">Get In Touch</h2>
+      <div class="w-20 h-1 bg-primary mx-auto rounded-full"></div>
+      <p class="text-gray-400 mt-4 text-sm md:text-base">Let's collaborate and build something impactful together.</p>
+    </div>
 
-    <!-- 2-column layout -->
     <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
-      
-      <!-- Contact Form (Left) -->
-      <div>
-        <form id="contactForm" class="space-y-4 bg-gray-900 p-6 rounded">
-          <input id="name" type="text" placeholder="Your Name" required class="w-full p-3 rounded" />
-          <input id="email" type="email" placeholder="your.email@example.com" required class="w-full p-3 rounded" />
-          <input id="subject" type="text" placeholder="Subject" required class="w-full p-3 rounded" />
-          <textarea id="message" rows="5" placeholder="Your message..." required class="w-full p-3 rounded"></textarea>
-          <button id="submitBtn" type="submit" class="bg-blue-600 w-full py-3 rounded-lg text-white font-medium hover:bg-blue-700 transition">
-            <span id="submitText">Send Message</span>
-            <span id="loadingSpinner" class="hidden"><i data-feather="loader" class="animate-spin w-4 h-4"></i> Sending...</span>
+
+      <div data-aos="fade-right" data-aos-duration="1000">
+        <form id="contactForm" class="space-y-5 p-8 rounded-2xl shadow-xl border border-gray-700 backdrop-blur-sm transition hover:shadow-primary/20" style="background-color: var(--color-bg-card);">
+          <input id="name" type="text" placeholder="Your Name" required
+                 class="w-full p-3 rounded-lg bg-gray-900/70 text-white border border-gray-700 focus:border-primary focus:ring-2 focus:ring-primary-dark/50 outline-none transition" style="background-color: var(--color-bg-secondary); color: var(--color-text-main);" />
+          <input id="email" type="email" placeholder="your.email@example.com" required
+                 class="w-full p-3 rounded-lg bg-gray-900/70 text-white border border-gray-700 focus:border-primary focus:ring-2 focus:ring-primary-dark/50 outline-none transition" style="background-color: var(--color-bg-secondary); color: var(--color-text-main);" />
+          <input id="subject" type="text" placeholder="Subject" required
+                 class="w-full p-3 rounded-lg bg-gray-900/70 text-white border border-gray-700 focus:border-primary focus:ring-2 focus:ring-primary-dark/50 outline-none transition" style="background-color: var(--color-bg-secondary); color: var(--color-text-main);" />
+          <textarea id="message" rows="5" placeholder="Your message..." required
+                    class="w-full p-3 rounded-lg bg-gray-900/70 text-white border border-gray-700 focus:border-primary focus:ring-2 focus:ring-primary-dark/50 outline-none transition" style="background-color: var(--color-bg-secondary); color: var(--color-text-main);"></textarea>
+
+          <button id="submitBtn" type="submit"
+                  class="relative bg-primary w-full py-3 rounded-lg text-white font-semibold hover:bg-primary-dark transition duration-300 flex justify-center items-center group overflow-hidden shadow-md hover:shadow-lg">
+            <span id="submitText" class="z-10">Send Message</span>
+            <span id="loadingSpinner" class="hidden flex items-center space-x-2">
+              <i data-feather="loader" class="animate-spin w-4 h-4"></i>
+              <span>Sending...</span>
+            </span>
+            <span class="absolute inset-0 bg-primary-dark opacity-0 group-hover:opacity-20 transition duration-300 rounded-lg"></span>
           </button>
         </form>
-        <p id="successMessage" class="hidden mt-4 text-green-400 font-medium">✅ Message sent successfully!</p>
-        <p id="errorMessage" class="hidden mt-4 text-red-400 font-medium">❌ Failed to send. Please try again.</p>
+
+        <p id="successMessage" class="hidden mt-4 text-primary font-medium animate-fadeIn">✅ Message sent successfully!</p>
+        <p id="errorMessage" class="hidden mt-4 text-red-500 font-medium animate-fadeIn">❌ Failed to send. Please try again.</p>
       </div>
 
-      <!-- Contact Information (Right) -->
-      <div data-aos="fade-left">
-        <div class="bg-gray-900 p-8 rounded-lg h-full">
-          <h3 class="text-xl font-semibold text-white mb-6">Contact Information</h3>
+      <div data-aos="fade-left" data-aos-duration="1000">
+        <div class="p-10 rounded-2xl shadow-xl border border-gray-700 backdrop-blur-sm transition hover:shadow-primary/20 h-full" style="background-color: var(--color-bg-card);">
+          <h3 class="text-2xl font-semibold text-white mb-6">Contact Information</h3>
+
           <div class="space-y-6">
-            <div class="flex items-start">
-              <div class="bg-blue-100 p-2 rounded-full mr-4">
-                <i data-feather="mail" class="text-blue-600"></i>
+            <div class="flex items-start" data-aos="fade-up" data-aos-delay="100">
+              <div class="bg-primary/20 p-2 rounded-full mr-4">
+                <i data-feather="mail" class="text-primary"></i>
               </div>
               <div>
                 <h4 class="font-medium text-white">Email</h4>
                 <p class="text-gray-300">me@dipakshrestha2.com.np</p>
               </div>
             </div>
-            <div class="flex items-start">
-              <div class="bg-blue-100 p-2 rounded-full mr-4">
-                <i data-feather="phone" class="text-blue-600"></i>
+
+            <div class="flex items-start" data-aos="fade-up" data-aos-delay="200">
+              <div class="bg-primary/20 p-2 rounded-full mr-4">
+                <i data-feather="phone" class="text-primary"></i>
               </div>
               <div>
                 <h4 class="font-medium text-white">Phone</h4>
                 <p class="text-gray-300">+977 9813589377</p>
               </div>
             </div>
-            <div class="flex items-start">
-              <div class="bg-blue-100 p-2 rounded-full mr-4">
-                <i data-feather="map-pin" class="text-blue-600"></i>
+
+            <div class="flex items-start" data-aos="fade-up" data-aos-delay="300">
+              <div class="bg-primary/20 p-2 rounded-full mr-4">
+                <i data-feather="map-pin" class="text-primary"></i>
               </div>
               <div>
                 <h4 class="font-medium text-white">Location</h4>
-                <p class="text-gray-300">Nepal, Burtibang</p>
+                <p class="text-gray-300">Burtibang, Nepal</p>
               </div>
             </div>
-            <div class="flex items-start">
-              <div class="bg-blue-100 p-2 rounded-full mr-4">
-                <i data-feather="clock" class="text-blue-600"></i>
+
+            <div class="flex items-start" data-aos="fade-up" data-aos-delay="400">
+              <div class="bg-primary/20 p-2 rounded-full mr-4">
+                <i data-feather="clock" class="text-primary"></i>
               </div>
               <div>
                 <h4 class="font-medium text-white">Availability</h4>
-                <p class="text-gray-300">Monday - Friday, 9AM - 5PM GMT</p>
+                <p class="text-gray-300">Mon – Fri, 9AM – 5PM GMT</p>
               </div>
             </div>
           </div>
 
-          <div class="mt-8">
+          <div class="mt-8" data-aos="fade-up" data-aos-delay="500">
             <h3 class="text-xl font-semibold text-white mb-4">Connect With Me</h3>
-            <div class="flex">
-              <a href="https://www.linkedin.com/in/dipak-shrestha-10203a171" target="_blank" class="bg-blue-100 p-3 rounded-full text-blue-600 hover:bg-blue-200 transition duration-300">linkedin
-                <i data-feather="linkedin"></i>
+            <div class="flex items-center space-x-4">
+              <a href="https://www.linkedin.com/in/dipak-shrestha-10203a171" target="_blank"
+                 class="p-3 bg-primary/20 text-primary rounded-full hover:bg-primary/50 hover:text-white transition transform hover:scale-110 duration-300">
+                <i data-feather="linkedin" class="w-5 h-5"></i>
+              </a>
+              <a href="https://github.com/dipakshrestha2" target="_blank"
+                 class="p-3 bg-primary/20 text-primary rounded-full hover:bg-primary/50 hover:text-white transition transform hover:scale-110 duration-300">
+                <i data-feather="github" class="w-5 h-5"></i>
               </a>
             </div>
           </div>
@@ -872,52 +917,117 @@
   </div>
 </section>
 
-    <!-- Footer -->
-    <footer class="bg-gray-900 text-white py-12 pulse">
+<footer class="bg-gray-900 text-white py-12" style="background-color: var(--color-bg-secondary);">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div>
-                    <h3 class="text-xl font-bold mb-4">Dipak Shrestha</h3>
-                    <p class="text-gray-400">Senior Administrator & Operations Management Professional Dipak Shrestha dedicated to optimizing business performance through strategic leadership.</p>
+                    <h3 class="text-xl font-bold mb-4 text-white">Dipak Shrestha</h3>
+                    <p class="text-gray-400">Senior Administrator & Operations Management Professional dedicated to optimizing business performance through strategic leadership.</p>
                 </div>
                 <div>
-                    <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+                    <h3 class="text-lg font-semibold mb-4 text-white">Quick Links</h3>
                     <ul class="space-y-2">
-                        <li><a href="#home" class="text-gray-400 hover:text-white transition duration-300">Home</a></li>
-                        <li><a href="#about" class="text-gray-400 hover:text-white transition duration-300">About</a></li>
-                        <li><a href="#experience" class="text-gray-400 hover:text-white transition duration-300">Experience</a></li>
-                        <li><a href="#skills" class="text-gray-400 hover:text-white transition duration-300">Skills</a></li>
-                        <li><a href="#contact" class="text-gray-400 hover:text-white transition duration-300">Contact</a></li>
+                        <li><a href="#home" class="text-gray-400 hover:text-primary transition duration-300">Home</a></li>
+                        <li><a href="#about" class="text-gray-400 hover:text-primary transition duration-300">About</a></li>
+                        <li><a href="#experience" class="text-gray-400 hover:text-primary transition duration-300">Experience</a></li>
+                        <li><a href="#skills" class="text-gray-400 hover:text-primary transition duration-300">Skills</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-primary transition duration-300">Contact</a></li>
                     </ul>
                 </div>
                 <div>
-                    <h3 class="text-lg font-semibold mb-4">Hire Me</h3>
+                    <h3 class="text-lg font-semibold mb-4 text-white">Hire Me</h3>
                     <p class="text-gray-400 mb-4">Available for consulting and full-time opportunities.</p>
-                    <a href="#contact" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-6 rounded-lg transition duration-300 w-full text-center">
+                    <a href="#contact" class="inline-block bg-primary hover:bg-primary-dark text-white font-medium py-3 px-6 rounded-lg transition duration-300 w-full text-center shadow-lg">
                         Get In Touch
                     </a>
                 </div>
             </div>
             <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-                <p>&copy; 2023 Dipak Shrestha. All rights reserved.</p>
+                <p>&copy; 2025 Dipak Shrestha. All rights reserved.</p>
             </div>
         </div>
     </footer>
-    <!-- EmailJS Library -->
     <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
 
     <script>
-        (function(){ emailjs.init("nBhkPnna963uCu_gS"); })(); // your Public Key
-        // Initialize animations
-        AOS.init({
-            duration: 800,
-            easing: 'ease-in-out',
-            once: true
-        });
+document.addEventListener("DOMContentLoaded", () => {
+    const html = document.documentElement;
 
-        // Initialize Vanta.js background
-        VANTA.GLOBE({
-            el: "#vanta-bg",
+    // =================================================================
+    // ✅ 1. DUAL-THEME TOGGLE LOGIC
+    // =================================================================
+
+    const themeToggleDesktop = document.getElementById("theme-toggle-desktop");
+    const themeToggleMobile = document.getElementById("theme-toggle-mobile");
+    const vantaBgElement = document.getElementById("vanta-bg");
+
+    // Function to set the theme and update icons
+    const setTheme = (theme) => {
+        html.setAttribute("data-theme", theme);
+        localStorage.setItem("theme", theme);
+        
+        const isDark = theme === 'dark';
+        const iconName = isDark ? 'sun' : 'moon';
+        
+        // Update both toggle icons
+        [themeToggleDesktop, themeToggleMobile].forEach(btn => {
+            if (btn) {
+                btn.innerHTML = `<i data-feather="${iconName}" class="w-6 h-6"></i>`;
+            }
+        });
+        
+        // Update Vanta.js background dynamically for a smooth transition
+        if (window.vantaEffect) {
+            window.vantaEffect.setOptions({
+                color: isDark ? 0x3b82f6 : 0x10b981, // Blue for dark, Emerald for light
+                backgroundColor: isDark ? 0x020617 : 0xf3f4f6, // Dark navy for dark, Light gray for light
+            });
+        }
+        
+        feather.replace(); // Re-render icons after change
+    };
+
+    // Initialize theme from localStorage or default to dark
+    const savedTheme = localStorage.getItem("theme") || 'dark';
+    setTheme(savedTheme);
+
+    // Add event listeners to toggles
+    const handleThemeToggle = () => {
+        const currentTheme = html.getAttribute("data-theme");
+        const newTheme = currentTheme === "dark" ? "light" : "dark";
+        setTheme(newTheme);
+    };
+
+    if (themeToggleDesktop) themeToggleDesktop.addEventListener("click", handleThemeToggle);
+    if (themeToggleMobile) themeToggleMobile.addEventListener("click", handleThemeToggle);
+
+
+    // =================================================================
+    // ✅ 2. INITIALIZE LIBRARIES
+    // =================================================================
+
+    // Initialize EmailJS
+    (function() {
+        emailjs.init("nBhkPnna963uCu_gS");
+    })();
+
+    // Initialize AOS Animations
+    AOS.init({
+        duration: 1000,
+        easing: "ease-in-out",
+        once: true,
+        mirror: false
+    });
+
+    // Initialize VANTA Globe Background
+    if (vantaBgElement) {
+        // Initial colors based on the current theme
+        const isDark = savedTheme === 'dark';
+        const vantaColor = isDark ? 0x3b82f6 : 0x10b981;
+        const vantaBgColor = isDark ? 0x020617 : 0xf3f4f6;
+
+        window.vantaEffect = VANTA.GLOBE({
+            el: vantaBgElement,
             mouseControls: true,
             touchControls: true,
             gyroControls: false,
@@ -925,82 +1035,102 @@
             minWidth: 200.00,
             scale: 1.00,
             scaleMobile: 1.00,
-            color: 0x3b82f6,
-            backgroundColor: 0x020617,
+            color: vantaColor,
+            backgroundColor: vantaBgColor,
             size: 0.8,
             points: 10,
             maxDistance: 20,
             spacing: 15
         });
+    }
 
-        // Mobile menu toggle
-        document.getElementById('menu-btn').addEventListener('click', function() {
-            const menu = document.getElementById('mobile-menu');
-            menu.classList.toggle('hidden');
+
+    // =================================================================
+    // ✅ 3. MOBILE MENU & UTILITIES
+    // =================================================================
+
+    // Mobile menu toggle
+    const menuBtn = document.getElementById("menu-btn");
+    const mobileMenu = document.getElementById("mobile-menu");
+    if (menuBtn && mobileMenu) {
+        menuBtn.addEventListener("click", () => {
+            mobileMenu.classList.toggle("hidden");
             feather.replace();
         });
-
-        // Animate skill bars on scroll
-        const skillBars = document.querySelectorAll('.skill-bar');
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    const width = entry.target.style.width;
-                    entry.target.style.width = '0';
-                    setTimeout(() => {
-                        entry.target.style.width = width;
-                    }, 100);
-                }
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
             });
-        }, {threshold: 0.1});
-
-        skillBars.forEach(bar => {
-            observer.observe(bar);
         });
+    }
 
-        // Contact form handling with EmailJS integratio
-
-    // Contact form handling
-    document.getElementById("contactForm").addEventListener("submit", async (e)=>{
-        e.preventDefault();
-
-        const btn = document.getElementById("submitBtn");
-        const text = document.getElementById("submitText");
-        const spin = document.getElementById("loadingSpinner");
-        const success = document.getElementById("successMessage");
-        const error = document.getElementById("errorMessage");
-
-        // UI states
-        btn.disabled = true;
-        text.classList.add("hidden");
-        spin.classList.remove("hidden");
-        success.classList.add("hidden");
-        error.classList.add("hidden");
-
-        try {
-        await emailjs.send("service_v6ez09g","template_4phetwr",{
-            subject: document.getElementById("subject").value,
-            name: document.getElementById("name").value,
-            from_name: document.getElementById("name").value,
-            to_name: "me@dipakshrestha2.com.np",
-            email: document.getElementById("email").value,
-            message: document.getElementById("message").value,
-            time: new Date().toLocaleString()
+    // Animate skill bars when visible (IntersectionObserver for better performance)
+    const skillBars = document.querySelectorAll(".skill-bar-fill");
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting && !entry.target.classList.contains('animated')) {
+                const bar = entry.target;
+                const finalWidth = bar.getAttribute("data-skill-level");
+                // Reset width to 0 for a clean animation start
+                bar.style.width = "0"; 
+                // Delay for a short period before setting the final width
+                setTimeout(() => {
+                    bar.style.width = finalWidth;
+                    bar.classList.add('animated');
+                }, 100);
+            }
         });
+    }, { threshold: 0.5 }); 
 
-        // Show success
-        success.classList.remove("hidden");
-        e.target.reset();
+    skillBars.forEach(bar => observer.observe(bar));
 
-        } catch(err) {
-        console.error("EmailJS error:", err);
-        error.classList.remove("hidden");
-        } finally {
-        btn.disabled = false;
-        text.classList.remove("hidden");
-        spin.classList.add("hidden");
-        }
-    });
-    </script>
+    // Contact form submission via EmailJS (Retained original logic)
+    const contactForm = document.getElementById("contactForm");
+    if (contactForm) {
+        contactForm.addEventListener("submit", async (e) => {
+            e.preventDefault();
+
+            const btn = document.getElementById("submitBtn");
+            const text = document.getElementById("submitText");
+            const spin = document.getElementById("loadingSpinner");
+            const success = document.getElementById("successMessage");
+            const error = document.getElementById("errorMessage");
+
+            // UI state: loading
+            btn.disabled = true;
+            text.classList.add("hidden");
+            spin.classList.remove("hidden");
+            success.classList.add("hidden");
+            error.classList.add("hidden");
+
+            try {
+                await emailjs.send("service_v6ez09g", "template_4phetwr", {
+                    subject: document.getElementById("subject").value,
+                    name: document.getElementById("name").value,
+                    from_name: document.getElementById("name").value,
+                    to_name: "me@dipakshrestha2.com.np",
+                    email: document.getElementById("email").value,
+                    message: document.getElementById("message").value,
+                    time: new Date().toLocaleString()
+                });
+
+                // Success message
+                success.classList.remove("hidden");
+                contactForm.reset();
+            } catch (err) {
+                console.error("EmailJS Error:", err);
+                error.classList.remove("hidden");
+            } finally {
+                btn.disabled = false;
+                text.classList.remove("hidden");
+                spin.classList.add("hidden");
+            }
+        });
+    }
+
+    // Re-initialize feather icons globally at the end for all elements
+    feather.replace();
+});
+</script>
 </body>
 </html>
