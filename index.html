@@ -4,8 +4,52 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Professional portfolio of Dipak Shrestha - Senior Administrator specializing in Operations Management, Process Optimization, and Web/App Development.">
-  <title>Dipak Shrestha | Operations Management Portfolio (Freelance Web/App Developer - In Progress)</title>
+  <meta name="keywords" content="Dipak Shrestha, Senior Administrator, Operations Management, Process Optimization, Web Development, Data Analyst, Portfolio">
+  <meta name="author" content="Dipak Shrestha">
+  
+  <!-- Open Graph / Social Media Meta Tags -->
+  <meta property="og:title" content="Dipak Shrestha | Operations Management Portfolio">
+  <meta property="og:description" content="Senior Administrator specializing in Operations Management, Process Optimization, and Web/App Development.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://dipakshrestha2.com.np">
+  
+  <!-- Structured Data for SEO -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Dipak Shrestha",
+    "jobTitle": "Senior Administrator",
+    "description": "Strategic Operations Leader with 8+ years of experience in process optimization, team management, and data-driven decision making. Transforming complex operations into streamlined success.",
+    "url": "https://dipakshrestha2.com.np",
+    "sameAs": [
+      "https://www.linkedin.com/in/dipak-shrestha-10203a171",
+      "https://github.com/dipakshrestha2"
+    ],
+    "knowsAbout": ["Operations Management", "Process Optimization", "Data Analysis", "Web Development"],
+    "workLocation": {
+      "@type": "Place",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Burtibang",
+        "addressCountry": "Nepal"
+      }
+    }
+  }
+  </script>
+  
+  <title>Dipak Shrestha | Senior Administrator - Operations Management & Process Optimization</title>
   <link rel="icon" type="image/x-icon" href="/static/favicon.ico" />
+  
+  <!-- Preload critical resources -->
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="https://unpkg.com/aos@2.3.1/dist/aos.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  
+  <!-- DNS Prefetch for external domains -->
+  <link rel="dns-prefetch" href="https://cdn.tailwindcss.com">
+  <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+  <link rel="dns-prefetch" href="https://unpkg.com">
+  <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
   
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
@@ -49,13 +93,23 @@
       box-sizing: border-box;
     }
 
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       font-family: 'Inter', sans-serif;
       background-color: var(--color-bg-main);
       color: var(--color-text-main);
-      scroll-behavior: smooth;
       overflow-x: hidden;
       transition: background-color 0.3s ease, color 0.3s ease;
+      line-height: 1.6;
+    }
+
+    /* Focus styles for accessibility */
+    a:focus, button:focus, input:focus, textarea:focus {
+      outline: 2px solid var(--color-primary);
+      outline-offset: 2px;
     }
 
     /* Smooth Scrollbar */
@@ -281,6 +335,166 @@
     [data-theme="light"] .hero-gradient {
       background: radial-gradient(ellipse at top, rgba(99, 102, 241, 0.08), transparent 50%);
     }
+
+    /* Timeline Styles */
+    .timeline {
+      position: relative;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .timeline::after {
+      content: '';
+      position: absolute;
+      width: 6px;
+      background-color: var(--color-primary);
+      top: 0;
+      bottom: 0;
+      left: 50%;
+      margin-left: -3px;
+      border-radius: 10px;
+    }
+
+    .timeline-item {
+      padding: 10px 40px;
+      position: relative;
+      width: 50%;
+      box-sizing: border-box;
+    }
+
+    .timeline-item:nth-child(odd) {
+      left: 0;
+    }
+
+    .timeline-item:nth-child(even) {
+      left: 50%;
+    }
+
+    .timeline-item::after {
+      content: '';
+      position: absolute;
+      width: 25px;
+      height: 25px;
+      right: -13px;
+      background-color: var(--color-bg-main);
+      border: 4px solid var(--color-primary);
+      top: 15px;
+      border-radius: 50%;
+      z-index: 1;
+    }
+
+    .timeline-item:nth-child(even)::after {
+      left: -12px;
+    }
+
+    /* Responsive Timeline */
+    @media screen and (max-width: 768px) {
+      .timeline::after {
+        left: 31px;
+      }
+      
+      .timeline-item {
+        width: 100%;
+        padding-left: 70px;
+        padding-right: 25px;
+      }
+      
+      .timeline-item:nth-child(even) {
+        left: 0;
+      }
+      
+      .timeline-item::after {
+        left: 18px;
+      }
+      
+      .timeline-item:nth-child(odd)::after,
+      .timeline-item:nth-child(even)::after {
+        left: 18px;
+      }
+    }
+
+    /* Loading Animation */
+    .loading {
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      border: 3px solid rgba(255,255,255,.3);
+      border-radius: 50%;
+      border-top-color: #fff;
+      animation: spin 1s ease-in-out infinite;
+    }
+
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+
+    /* Image optimization */
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    /* Performance optimizations */
+    .will-change-transform {
+      will-change: transform;
+    }
+
+    /* Print styles */
+    @media print {
+      .no-print {
+        display: none !important;
+      }
+      
+      body {
+        background: white;
+        color: black;
+      }
+      
+      .modern-card {
+        box-shadow: none;
+        border: 1px solid #ddd;
+      }
+    }
+
+    /* Project Card Styles */
+    .project-card {
+      position: relative;
+      overflow: hidden;
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .project-card .project-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(10, 10, 15, 0.9);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 2rem;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.4s ease;
+    }
+
+    [data-theme="light"] .project-card .project-overlay {
+      background: rgba(255, 255, 255, 0.95);
+    }
+
+    .project-card:hover .project-overlay {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .project-card img {
+      transition: transform 0.5s ease;
+    }
+
+    .project-card:hover img {
+      transform: scale(1.05);
+    }
   </style>
 </head>
 
@@ -288,8 +502,11 @@
   <!-- Animated Background -->
   <div id="vanta-bg" class="animated-bg"></div>
 
+  <!-- Skip to main content for accessibility -->
+  <a href="#main-content" class="sr-only focus:not-sr-only">Skip to main content</a>
+
   <!-- Navigation -->
-  <nav class="fixed w-full navbar-blur z-50 transition-all duration-300">
+  <nav class="fixed w-full navbar-blur z-50 transition-all duration-300" aria-label="Main navigation">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex justify-between items-center h-16">
         <div class="flex items-center">
@@ -302,36 +519,36 @@
           <a href="#experience" class="text-sm font-medium hover:text-primary transition">Experience</a>
           <a href="#skills" class="text-sm font-medium hover:text-primary transition">Skills</a>
           <a href="#certifications" class="text-sm font-medium hover:text-primary transition">Certifications</a>
-<a href="#projects" class="text-sm font-medium hover:text-primary transition">Projects</a>
+          <a href="#projects" class="text-sm font-medium hover:text-primary transition">Projects</a>
           <a href="#contact" class="text-sm font-medium hover:text-primary transition">Contact</a>
           
-          <button id="theme-toggle" class="theme-toggle p-2 rounded-full hover:bg-gray-800/50 transition">
+          <button id="theme-toggle" class="theme-toggle p-2 rounded-full hover:bg-gray-800/50 transition" aria-label="Toggle theme">
             <i data-feather="moon" class="w-5 h-5"></i>
           </button>
         </div>
 
-        <button id="mobile-menu-btn" class="md:hidden p-2">
+        <button id="mobile-menu-btn" class="md:hidden p-2" aria-label="Open mobile menu">
           <i data-feather="menu" class="w-6 h-6"></i>
         </button>
       </div>
     </div>
 
     <!-- Mobile Menu -->
-    <div id="mobile-menu" class="hidden md:hidden glass">
+    <div id="mobile-menu" class="hidden md:hidden glass" aria-label="Mobile menu">
       <div class="px-4 py-2 space-y-2">
         <a href="#home" class="block py-2 hover:text-primary transition">Home</a>
         <a href="#about" class="block py-2 hover:text-primary transition">About</a>
         <a href="#experience" class="block py-2 hover:text-primary transition">Experience</a>
         <a href="#skills" class="block py-2 hover:text-primary transition">Skills</a>
         <a href="#certifications" class="block py-2 hover:text-primary transition">Certifications</a>
-<a href="#projects" class="block py-2 hover:text-primary transition">Projects</a>
+        <a href="#projects" class="block py-2 hover:text-primary transition">Projects</a>
         <a href="#contact" class="block py-2 hover:text-primary transition">Contact</a>
       </div>
     </div>
   </nav>
 
   <!-- Hero Section -->
-  <section id="home" class="min-h-screen flex items-center justify-center pt-16 hero-gradient">
+  <section id="home" class="min-h-screen flex items-center justify-center pt-16 hero-gradient" aria-labelledby="hero-heading">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
         
@@ -341,18 +558,17 @@
             <span class="badge">👋 Welcome to my portfolio</span>
           </div>
           
-          <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight">
+          <h1 id="hero-heading" class="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight">
             Hi, I'm <span class="gradient-text">Dipak</span>
           </h1>
           
           <h2 class="text-2xl md:text-3xl font-semibold text-gray-400">
             Senior Administrator & 
-            <span class="typing text-primary" id="typing-text"></span>
+            <span class="typing text-primary" id="typing-text" aria-live="polite"></span>
           </h2>
           
           <p class="text-lg text-gray-400 max-w-xl">
-            Strategic leader with 8+ years of experience optimizing business operations, 
-            improving efficiency, and driving organizational success.
+            Strategic Operations Leader with 8+ years of experience in process optimization, team management, and data-driven decision making. Transforming complex operations into streamlined success.
           </p>
 
           <div class="flex flex-wrap gap-4">
@@ -366,15 +582,15 @@
 
           <div class="flex items-center gap-6 pt-4">
             <a href="https://www.linkedin.com/in/dipak-shrestha-10203a171" target="_blank" 
-               class="p-3 rounded-full glass hover:bg-primary transition">
+               class="p-3 rounded-full glass hover:bg-primary transition" aria-label="LinkedIn profile">
               <i data-feather="linkedin" class="w-5 h-5"></i>
             </a>
             <a href="https://github.com/dipakshrestha2" target="_blank"
-               class="p-3 rounded-full glass hover:bg-primary transition">
+               class="p-3 rounded-full glass hover:bg-primary transition" aria-label="GitHub profile">
               <i data-feather="github" class="w-5 h-5"></i>
             </a>
             <a href="mailto:me@dipakshrestha2.com.np"
-               class="p-3 rounded-full glass hover:bg-primary transition">
+               class="p-3 rounded-full glass hover:bg-primary transition" aria-label="Send email">
               <i data-feather="mail" class="w-5 h-5"></i>
             </a>
           </div>
@@ -385,7 +601,7 @@
           <div class="relative floating">
             <div class="absolute inset-0 bg-gradient-to-r from-primary to-accent rounded-full blur-3xl opacity-30"></div>
             <div class="relative w-80 h-80 rounded-full overflow-hidden border-4 border-primary shadow-2xl">
-                <img src="Dipak.JPG" alt="Profile" class="w-64 h-64 md:w-80 md:h-80 rounded-full object-cover border-4 border-primary/50">
+                <img src="Dipak.JPG" alt="Dipak Shrestha - Senior Administrator" class="w-64 h-64 md:w-80 md:h-80 rounded-full object-cover border-4 border-primary/50" loading="lazy">
               <div class="w-full h-full bg-gradient-to-br from-primary/20 to-accent/20"></div>
             </div>
           </div>
@@ -396,12 +612,12 @@
   </section>
 
   <!-- About Section -->
-  <section id="about" class="py-24 relative">
+  <section id="about" class="py-24 relative" aria-labelledby="about-heading">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
       <div class="text-center mb-16" data-aos="fade-up">
         <span class="badge mb-4">About Me</span>
-        <h2 class="text-4xl md:text-5xl font-bold mb-4">
+        <h2 id="about-heading" class="text-4xl md:text-5xl font-bold mb-4">
           Passionate About <span class="gradient-text">Excellence</span>
         </h2>
         <p class="text-gray-400 max-w-2xl mx-auto">
@@ -481,127 +697,95 @@
     </div>
   </section>
 
-  <!-- Experience Section -->
-  <section id="experience" class="py-24">
+  <!-- Experience Timeline -->
+  <section id="experience" class="py-24 bg-gradient-to-b from-transparent to-bg-secondary/50" aria-labelledby="experience-heading">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      
-      <div class="text-center mb-16" data-aos="fade-up">
-        <span class="badge mb-4">Career Journey</span>
-        <h2 class="text-4xl md:text-5xl font-bold mb-4">
-          Professional <span class="gradient-text">Experience</span>
+      <div class="text-center mb-20" data-aos="fade-up">
+        <span class="inline-block px-6 py-3 bg-gradient-to-r from-primary to-accent text-white rounded-full text-sm font-semibold mb-6">Career Journey</span>
+        <h2 id="experience-heading" class="text-5xl md:text-6xl font-bold mb-6">
+          Professional <span class="gradient-text">Timeline</span>
         </h2>
       </div>
 
-      <div class="space-y-8">
-        
-        <!-- Experience Item -->
-        <div class="modern-card p-8 rounded-2xl" data-aos="fade-up">
-          <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
-            <div>
-              <h3 class="text-2xl font-bold mb-2">Senior Administrator – Business Support</h3>
-              <p class="text-gray-400">We One – United Arab Emirates</p>
+      <div class="timeline">
+        <div class="timeline-item" data-aos="fade-right">
+          <div class="modern-card p-6 rounded-3xl ml-auto">
+            <div class="flex justify-between items-start mb-4">
+              <div>
+                <h3 class="text-2xl font-bold mb-2">Senior Administrator – Business Support</h3>
+                <p class="text-primary">We One – United Arab Emirates</p>
+              </div>
+              <span class="px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-semibold">May 2023 – Jan 2025</span>
             </div>
-            <span class="badge mt-4 md:mt-0">May 2023 – January 2025</span>
+            <ul class="space-y-2">
+              <li class="flex items-start gap-3"><i data-feather="check-circle" class="w-5 h-5 text-success mt-1"></i>Directed operations ensuring 100% goal alignment</li>
+              <li class="flex items-start gap-3"><i data-feather="check-circle" class="w-5 h-5 text-success mt-1"></i>Mentored teams on process excellence</li>
+              <li class="flex items-start gap-3"><i data-feather="check-circle" class="w-5 h-5 text-success mt-1"></i>Maintained perfect financial data accuracy</li>
+              <li class="flex items-start gap-3"><i data-feather="check-circle" class="w-5 h-5 text-success mt-1"></i>Mentored new team members, establishing process excellence</li>
+              <li class="flex items-start gap-3"><i data-feather="check-circle" class="w-5 h-5 text-success mt-1"></i>Resolved client issues promptly while maintaining service quality</li>
+            </ul>
           </div>
-          <ul class="space-y-2 text-gray-400">
-            <li class="flex items-start gap-2">
-              <i data-feather="check" class="w-5 h-5 text-primary mt-0.5 flex-shrink-0"></i>
-              <span>Directed daily operations ensuring 100% alignment with business goals</span>
-            </li>
-            <li class="flex items-start gap-2">
-              <i data-feather="check" class="w-5 h-5 text-primary mt-0.5 flex-shrink-0"></i>
-              <span>Mentored new team members, establishing process excellence</span>
-            </li>
-            <li class="flex items-start gap-2">
-              <i data-feather="check" class="w-5 h-5 text-primary mt-0.5 flex-shrink-0"></i>
-              <span>Maintained 100% financial data accuracy and streamlined reporting</span>
-            </li>
-            <li class="flex items-start gap-2">
-              <i data-feather="check" class="w-5 h-5 text-primary mt-0.5 flex-shrink-0"></i>
-              <span>Resolved client issues promptly while maintaining service quality.</span>
-            </li>
-            <li class="flex items-start gap-2">
-              <i data-feather="check" class="w-5 h-5 text-primary mt-0.5 flex-shrink-0"></i>
-              <span>Contributed to long-term planning and workflow optimization.</span>
-            </li>
-          </ul>
         </div>
 
-        <div class="modern-card p-8 rounded-2xl" data-aos="fade-up" data-aos-delay="100">
-          <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
-            <div>
-              <h3 class="text-2xl font-bold mb-2">Senior Administrator</h3>
-              <p class="text-gray-400">World Security – UAE</p>
+        <div class="timeline-item" data-aos="fade-left">
+          <div class="modern-card p-6 rounded-3xl">
+            <div class="flex justify-between items-start mb-4">
+              <div>
+                <h3 class="text-2xl font-bold mb-2">Senior Administrator</h3>
+                <p class="text-primary">World Security – UAE</p>
+              </div>
+              <span class="px-4 py-2 bg-accent/10 text-accent rounded-full text-sm font-semibold">Jan 2022 – Apr 2023</span>
             </div>
-            <span class="badge mt-4 md:mt-0">Jan 2022 – April 2023</span>
+            <ul class="space-y-2">
+              <li class="flex items-start gap-3"><i data-feather="check-circle" class="w-5 h-5 text-success mt-1"></i>Led operations, procurement & compliance</li>
+              <li class="flex items-start gap-3"><i data-feather="check-circle" class="w-5 h-5 text-success mt-1"></i>Trained junior administrators</li>
+              <li class="flex items-start gap-3"><i data-feather="check-circle" class="w-5 h-5 text-success mt-1"></i>Provide 24/7 on-call emergency support as part of the Business Intelligence Team.</li>
+            </ul>
           </div>
-          <ul class="space-y-2 text-gray-400">
-            <li class="flex items-start gap-2">
-              <i data-feather="check" class="w-5 h-5 text-primary mt-0.5 flex-shrink-0"></i>
-              <span>Led departmental operations, procurement, and compliance tracking</span>
-            </li>
-            <li class="flex items-start gap-2">
-              <i data-feather="check" class="w-5 h-5 text-primary mt-0.5 flex-shrink-0"></i>
-              <span>Trained and mentored junior administrators</span>
-            </li>
-          </ul>
         </div>
 
-        <div class="modern-card p-8 rounded-2xl" data-aos="fade-up" data-aos-delay="200">
-          <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
-            <div>
-              <h3 class="text-2xl font-bold mb-2">Administrator</h3>
-              <p class="text-gray-400">World Security – Dubai</p>
+        <div class="timeline-item" data-aos="fade-right">
+          <div class="modern-card p-6 rounded-3xl ml-auto">
+            <div class="flex justify-between items-start mb-4">
+              <div>
+                <h3 class="text-2xl font-bold mb-2">Administrator</h3>
+                <p class="text-primary">World Security – Dubai</p>
+              </div>
+              <span class="px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-semibold">Sep 2019 – May 2022</span>
             </div>
-            <span class="badge mt-4 md:mt-0">Sep 2019 – May 2022</span>
+            <ul class="space-y-2">
+              <li class="flex items-start gap-3"><i data-feather="check-circle" class="w-5 h-5 text-success mt-1"></i>Managed 3,000+ employees' schedules, payroll, and compliance</li>
+              <li class="flex items-start gap-3"><i data-feather="check-circle" class="w-5 h-5 text-success mt-1"></i>Implemented advanced rostering and reporting systems</li>
+            </ul>
           </div>
-          <ul class="space-y-2 text-gray-400">
-            <li class="flex items-start gap-2">
-              <i data-feather="check" class="w-5 h-5 text-primary mt-0.5 flex-shrink-0"></i>
-              <span>Managed 3,000+ employees' schedules, payroll, and compliance</span>
-            </li>
-            <li class="flex items-start gap-2">
-              <i data-feather="check" class="w-5 h-5 text-primary mt-0.5 flex-shrink-0"></i>
-              <span>Implemented advanced rostering and reporting systems</span>
-            </li>
-          </ul>
         </div>
 
-        <div class="modern-card p-8 rounded-2xl" data-aos="fade-up" data-aos-delay="200">
-          <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
-            <div>
-              <h3 class="text-2xl font-bold mb-2">Security Officer</h3>
-              <p class="text-gray-400">World Security – Dubai</p>
+        <div class="timeline-item" data-aos="fade-left">
+          <div class="modern-card p-6 rounded-3xl">
+            <div class="flex justify-between items-start mb-4">
+              <div>
+                <h3 class="text-2xl font-bold mb-2">Security Officer</h3>
+                <p class="text-primary">World Security – Dubai</p>
+              </div>
+              <span class="px-4 py-2 bg-accent/10 text-accent rounded-full text-sm font-semibold">Mar 2017 – Sep 2019</span>
             </div>
-            <span class="badge mt-4 md:mt-0">Mar 2017 – Sep 2019</span>
+            <ul class="space-y-2">
+              <li class="flex items-start gap-3"><i data-feather="check-circle" class="w-5 h-5 text-success mt-1"></i>Executed regular patrols and emergency response protocols</li>
+              <li class="flex items-start gap-3"><i data-feather="check-circle" class="w-5 h-5 text-success mt-1"></i>Ensured compliance with safety regulations</li>
+            </ul>
           </div>
-          <ul class="space-y-2 text-gray-400">
-            <li class="flex items-start gap-2">
-              <i data-feather="check" class="w-5 h-5 text-primary mt-0.5 flex-shrink-0"></i>
-              <span>Executed regular patrols and emergency response protocols</span>
-            </li>
-            <li class="flex items-start gap-2">
-              <i data-feather="check" class="w-5 h-5 text-primary mt-0.5 flex-shrink-0"></i>
-              <span>Ensured compliance with safety regulations and procedures</span>
-            </li>
-            <li class="flex items-start gap-2">
-              <i data-feather="check" class="w-5 h-5 text-primary mt-0.5 flex-shrink-0"></i>
-              <span>Collaborated with emergency services during critical incidents.</span>
-            </li>
-          </ul>
         </div>
-
       </div>
     </div>
   </section>
 
   <!-- Skills Section -->
-  <section id="skills" class="py-24">
+  <section id="skills" class="py-24" aria-labelledby="skills-heading">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
       <div class="text-center mb-16" data-aos="fade-up">
         <span class="badge mb-4">Expertise</span>
-        <h2 class="text-4xl md:text-5xl font-bold mb-4">
+        <h2 id="skills-heading" class="text-4xl md:text-5xl font-bold mb-4">
           Core <span class="gradient-text">Competencies</span>
         </h2>
       </div>
@@ -697,182 +881,179 @@
       </div>
     </div>
   </section>
+
   <!-- Certifications Section -->
   <section id="certifications" class="py-24">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      
-      <div class="text-center mb-16" data-aos="fade-up">
-        <span class="badge mb-4">Credentials</span>
-        <h2 class="text-4xl md:text-5xl font-bold mb-4">
+      <div class="text-center mb-20" data-aos="fade-up">
+        <span class="badge bg-gradient-to-r from-primary to-accent text-white mb-6">Credentials</span>
+        <h2 class="text-5xl md:text-6xl font-bold mb-6">
           Certifications & <span class="gradient-text">Training</span>
         </h2>
-        <p class="text-gray-400 mt-4 max-w-2xl mx-auto">Commitment to continuous learning and technical upskilling.</p>
       </div>
 
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-
-            <div class="modern-card p-4 rounded-xl text-center" style="background-color: var(--color-bg-card);" data-aos="zoom-in" data-aos-delay="50">
-                 <i data-feather="file" class="w-8 h-8 mx-auto mb-2 text-primary"></i>
-                <h4 class="font-medium">Basic Powerpoint</h4>
-            </div>
-
-            <div class="modern-card p-4 rounded-xl text-center" style="background-color: var(--color-bg-card);" data-aos="zoom-in" data-aos-delay="100">
-                 <i data-feather="clipboard" class="w-8 h-8 mx-auto mb-2 text-primary"></i>
-                <h4 class="file">Basic Excel</h4>
-            </div>
-
-            <div class="modern-card p-4 rounded-xl text-center" style="background-color: var(--color-bg-card);" data-aos="zoom-in" data-aos-delay="150">
-                 <i data-feather="monitor" class="w-8 h-8 mx-auto mb-2 text-primary"></i>
-                <h4 class="font-medium">Advance Powerpoint</h4>
-            </div>
-
-            <div class="modern-card p-4 rounded-xl text-center" style="background-color: var(--color-bg-card);" data-aos="zoom-in" data-aos-delay="200">
-                 <i data-feather="clipboard" class="w-8 h-8 mx-auto mb-2 text-primary"></i>
-                <h4 class="clipboard">Advance Excel</h4>
-            </div>
-
-            <div class="modern-card p-4 rounded-xl text-center" style="background-color: var(--color-bg-card);" data-aos="zoom-in" data-aos-delay="250">
-                 <i data-feather="bar-chart-2" class="w-8 h-8 mx-auto mb-2 text-primary"></i>
-                <h4 class="font-medium">Data Analyst 101 by Microsoft</h4>
-            </div>
-
-            <div class="modern-card p-4 rounded-xl text-center" style="background-color: var(--color-bg-card);" data-aos="zoom-in" data-aos-delay="300">
-                 <i data-feather="database" class="w-8 h-8 mx-auto mb-2 text-primary"></i>
-                <h4 class="font-medium">SQL Analytics and Business Intelligence on Databricks</h4>
-            </div>
-
-            <div class="modern-card p-4 rounded-xl text-center" style="background-color: var(--color-bg-card);" data-aos="zoom-in" data-aos-delay="350">
-                 <i data-feather="zap" class="w-8 h-8 mx-auto mb-2 text-primary"></i>
-                <h4 class="font-medium">Digital Transformation</h4>
-            </div>
-
-            <div class="modern-card p-4 rounded-xl text-center" style="background-color: var(--color-bg-card);" data-aos="zoom-in" data-aos-delay="400">
-                 <i data-feather="briefcase" class="w-8 h-8 mx-auto mb-2 text-primary"></i>
-                <h4 class="font-medium">Business Analysis Basic</h4>
-            </div>
-
-            <div class="modern-card p-4 rounded-xl text-center" style="background-color: var(--color-bg-card);" data-aos="zoom-in" data-aos-delay="450">
-                 <i data-feather="briefcase" class="w-8 h-8 mx-auto mb-2 text-primary"></i>
-                <h4 class="font-medium">Get Data in Power BI</h4>
-            </div>
-
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="modern-card p-6 rounded-2xl text-center" data-aos="zoom-in">
+          <i data-feather="file" class="w-12 h-12 mx-auto mb-4 text-primary"></i>
+          <h4 class="font-semibold mb-2">Basic PowerPoint</h4>
+          <p class="text-sm">Microsoft Office Specialist</p>
+        </div>
+        <div class="modern-card p-6 rounded-2xl text-center" data-aos="zoom-in" data-aos-delay="100">
+          <i data-feather="clipboard" class="w-12 h-12 mx-auto mb-4 text-primary"></i>
+          <h4 class="font-semibold mb-2">Basic Excel</h4>
+          <p class="text-sm">Microsoft Office Specialist</p>
+        </div>
+        <div class="modern-card p-6 rounded-2xl text-center" data-aos="zoom-in" data-aos-delay="200">
+          <i data-feather="monitor" class="w-12 h-12 mx-auto mb-4 text-primary"></i>
+          <h4 class="font-semibold mb-2">Advanced PowerPoint</h4>
+          <p class="text-sm">Presentation Excellence</p>
+        </div>
+        <div class="modern-card p-6 rounded-2xl text-center" data-aos="zoom-in" data-aos-delay="300">
+          <i data-feather="clipboard" class="w-12 h-12 mx-auto mb-4 text-primary"></i>
+          <h4 class="font-semibold mb-2">Advanced Excel</h4>
+          <p class="text-sm">Data Analysis & Visualization</p>
+        </div>
+        <div class="modern-card p-6 rounded-2xl text-center" data-aos="zoom-in" data-aos-delay="400">
+          <i data-feather="bar-chart-2" class="w-12 h-12 mx-auto mb-4 text-primary"></i>
+          <h4 class="font-semibold mb-2">Data Analyst 101</h4>
+          <p class="text-sm">Microsoft Certified</p>
+        </div>
+        <div class="modern-card p-6 rounded-2xl text-center" data-aos="zoom-in" data-aos-delay="500">
+          <i data-feather="database" class="w-12 h-12 mx-auto mb-4 text-primary"></i>
+          <h4 class="font-semibold mb-2">SQL Analytics</h4>
+          <p class="text-sm">Databricks Business Intelligence</p>
+        </div>
+        <div class="modern-card p-6 rounded-2xl text-center" data-aos="zoom-in" data-aos-delay="600">
+          <i data-feather="zap" class="w-12 h-12 mx-auto mb-4 text-primary"></i>
+          <h4 class="font-semibold mb-2">Digital Transformation</h4>
+          <p class="text-sm">Strategic Implementation</p>
+        </div>
+        <div class="modern-card p-6 rounded-2xl text-center" data-aos="zoom-in" data-aos-delay="700">
+          <i data-feather="briefcase" class="w-12 h-12 mx-auto mb-4 text-primary"></i>
+          <h4 class="font-semibold mb-2">Business Analysis Basic</h4>
+          <p class="text-sm">Fundamentals Certification</p>
+        </div>
+        <div class="modern-card p-6 rounded-2xl text-center" data-aos="zoom-in" data-aos-delay="800">
+          <i data-feather="database" class="w-12 h-12 mx-auto mb-4 text-primary"></i>
+          <h4 class="font-semibold mb-2">Get Data in Power BI</h4>
+          <p class="text-sm">Microsoft Power BI Certification</p>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- Projects Section -->
-<section id="projects" class="py-24">
+<section id="projects" class="py-24" aria-labelledby="projects-heading">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
       <div class="text-center mb-16" data-aos="fade-up">
         <span class="badge mb-4">Portfolio</span>
-        <h2 class="text-4xl md:text-5xl font-bold mb-4">
+        <h2 id="projects-heading" class="text-4xl md:text-5xl font-bold mb-4">
           Featured <span class="gradient-text">Projects</span>
         </h2>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         
-        <a href="https://github.com/Dipakshrestha2" target="_blank" class="modern-card rounded-2xl overflow-hidden group" data-aos="fade-up">
-          <div class="h-48 bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center">
-             <img src="Screenshot 2025-09-21 at 09.44.28.JPG" alt="Sales Dashboard Screenshot" class="w-full h-full object-cover">
-          </div>
-          <div class="p-6">
-            <h3 class="text-xl font-bold mb-2 group-hover:text-primary transition">Sales Dashboard</h3>
-            <p class="text-gray-400 mb-4 text-sm">Interactive Power BI dashboard tracking revenue and performance</p>
-            <div class="flex flex-wrap gap-2">
-              <span class="text-xs badge">Identify Trends & Opportunities</span>
-               <span class="text-xs badge">Improve Efficiency</span>
-              <span class="text-xs badge">Make Data-Driven Decisions</span>
+        <a href="https://github.com/Dipakshrestha2" target="_blank" class="project-card modern-card rounded-3xl overflow-hidden group" data-aos="fade-up">
+          <div class="relative overflow-hidden">
+            <img src="Screenshot 2025-09-21 at 09.44.28.JPG" alt="Sales Dashboard" class="w-full h-64 object-cover">
+            <div class="project-overlay">
+              <h3 class="text-2xl font-bold mb-2">Sales Dashboard</h3>
+              <p class="mb-4">Interactive Power BI dashboard tracking revenue and performance</p>
+              <div class="flex gap-2">
+                <span class="px-3 py-1 bg-primary/20 text-primary rounded-full text-sm">Power BI</span>
+                <span class="px-3 py-1 bg-accent/20 text-accent rounded-full text-sm">Analytics</span>
+              </div>
             </div>
           </div>
         </a>
 
-        <a href="https://github.com/Dipakshrestha2" target="_blank" class="modern-card rounded-2xl overflow-hidden group" data-aos="fade-up" data-aos-delay="100">
-          <div class="h-48 bg-gradient-to-br from-accent/20 to-primary/20 flex items-center justify-center">
-            <img src="http://static.photos/office/640x360/67" alt="ZOHO Desk Implementation" class="w-full h-full object-cover">
-          </div>
-          <div class="p-6">
-            <h3 class="text-xl font-bold mb-2 group-hover:text-primary transition">ZOHO Desk Implementation</h3>
-            <p class="text-gray-400 mb-4 text-sm">Spearheaded ZOHO Desk setup and training for admin/welfare assistants to handle employee grievances & helpdesk tickets efficiently</p>
-            <div class="flex flex-wrap gap-2">
-              <span class="text-xs badge">ZOHO</span>
-              <span class="text-xs badge">Helpdesk</span>
-              <span class="text-xs badge">Training</span>
+        <a href="https://github.com/Dipakshrestha2" target="_blank" class="project-card modern-card rounded-3xl overflow-hidden group" data-aos="fade-up" data-aos-delay="100">
+          <div class="relative overflow-hidden">
+            <img src="http://static.photos/office/640x360/67" alt="ZOHO Desk Implementation" class="w-full h-64 object-cover">
+            <div class="project-overlay">
+              <h3 class="text-2xl font-bold mb-2">ZOHO Desk Implementation</h3>
+              <p class="mb-4">Spearheaded ZOHO Desk setup and training for admin/welfare assistants</p>
+              <div class="flex gap-2">
+                <span class="px-3 py-1 bg-primary/20 text-primary rounded-full text-sm">ZOHO</span>
+                <span class="px-3 py-1 bg-accent/20 text-accent rounded-full text-sm">Helpdesk</span>
+                <span class="px-3 py-1 bg-primary/20 text-primary rounded-full text-sm">Training</span>
+              </div>
             </div>
           </div>
         </a>
 
-        <a href="https://github.com/Dipakshrestha2" target="_blank" class="modern-card rounded-2xl overflow-hidden group" data-aos="fade-up" data-aos-delay="100">
-          <div class="h-48 bg-gradient-to-br from-accent/20 to-primary/20 flex items-center justify-center">
-            <img src="Screenshot 2025-09-21 at 18.04.20.png" alt="Monthly Productivity Reports" class="w-full h-full object-cover">
-          </div>
-          <div class="p-6">
-            <h3 class="text-xl font-bold mb-2 group-hover:text-primary transition">Monthly Productivity Reports</h3>
-            <p class="text-gray-400 mb-4 text-sm">TAcknowledges top performers and sets clear goals for improvement.</p>
-            <div class="flex flex-wrap gap-2">
-              <span class="text-xs badge">Improving Efficiency</span>
-              <span class="text-xs badge">Tracking Progress</span>
-              <span class="text-xs badge">Informing Decisions</span>
+        <a href="https://github.com/Dipakshrestha2" target="_blank" class="project-card modern-card rounded-3xl overflow-hidden group" data-aos="fade-up" data-aos-delay="150">
+          <div class="relative overflow-hidden">
+            <img src="Screenshot 2025-09-21 at 18.04.20.png" alt="Monthly Productivity Reports" class="w-full h-64 object-cover">
+            <div class="project-overlay">
+              <h3 class="text-2xl font-bold mb-2">Monthly Productivity Reports</h3>
+              <p class="mb-4">Acknowledges top performers and sets clear goals for improvement</p>
+              <div class="flex gap-2">
+                <span class="px-3 py-1 bg-primary/20 text-primary rounded-full text-sm">Efficiency</span>
+                <span class="px-3 py-1 bg-accent/20 text-accent rounded-full text-sm">Tracking</span>
+                <span class="px-3 py-1 bg-primary/20 text-primary rounded-full text-sm">Analysis</span>
+              </div>
             </div>
           </div>
         </a>
 
-        <a href="https://github.com/Dipakshrestha2" target="_blank" class="modern-card rounded-2xl overflow-hidden group" data-aos="fade-up" data-aos-delay="100">
-          <div class="h-48 bg-gradient-to-br from-accent/20 to-primary/20 flex items-center justify-center">
-            <img src="dashboard_customer.jpg" alt="Tableau Dashboard Screenshot" class="w-full h-full object-cover">
-          </div>
-          <div class="p-6">
-            <h3 class="text-xl font-bold mb-2 group-hover:text-primary transition">Customer Insights</h3>
-            <p class="text-gray-400 mb-4 text-sm">Tableau dashboard analyzing customer segmentation and churn</p>
-            <div class="flex flex-wrap gap-2">
-              <span class="text-xs badge">Tableau</span>
-              <span class="text-xs badge">Predictive</span>
+        <a href="https://github.com/Dipakshrestha2" target="_blank" class="project-card modern-card rounded-3xl overflow-hidden group" data-aos="fade-up" data-aos-delay="200">
+          <div class="relative overflow-hidden">
+            <img src="dashboard_customer.jpg" alt="Customer Insights" class="w-full h-64 object-cover">
+            <div class="project-overlay">
+              <h3 class="text-2xl font-bold mb-2">Customer Insights</h3>
+              <p class="mb-4">Tableau dashboard analyzing customer segmentation and churn</p>
+              <div class="flex gap-2">
+                <span class="px-3 py-1 bg-primary/20 text-primary rounded-full text-sm">Tableau</span>
+                <span class="px-3 py-1 bg-accent/20 text-accent rounded-full text-sm">Predictive</span>
+              </div>
             </div>
           </div>
         </a>
 
-        <a href="https://github.com/Dipakshrestha2" target="_blank" class="modern-card rounded-2xl overflow-hidden group" data-aos="fade-up" data-aos-delay="100">
-          <div class="h-48 bg-gradient-to-br from-accent/20 to-primary/20 flex items-center justify-center">
-            <img src="modern Data analytical dashboard.jpg" alt="Tableau Dashboard Screenshot" class="w-full h-full object-cover">
-          </div>
-          <div class="p-6">
-            <h3 class="text-xl font-bold mb-2 group-hover:text-primary transition">Modern Data Analytical Dashboard</h3>
-            <p class="text-gray-400 mb-4 text-sm">A responsive and interactive dashboard providing actional insights for operational strategy.</p>
-            <div class="flex flex-wrap gap-2">
-              <span class="text-xs badge">Responsive Design</span>
-              <span class="text-xs badge">Actionable Insights</span>
-              <span class="text-xs badge">live</span>
+        <a href="https://github.com/Dipakshrestha2" target="_blank" class="project-card modern-card rounded-3xl overflow-hidden group" data-aos="fade-up" data-aos-delay="250">
+          <div class="relative overflow-hidden">
+            <img src="modern Data analytical dashboard.jpg" alt="Modern Data Analytical Dashboard" class="w-full h-64 object-cover">
+            <div class="project-overlay">
+              <h3 class="text-2xl font-bold mb-2">Modern Data Analytical Dashboard</h3>
+              <p class="mb-4">A responsive and interactive dashboard providing actionable insights</p>
+              <div class="flex gap-2">
+                <span class="px-3 py-1 bg-primary/20 text-primary rounded-full text-sm">Responsive</span>
+                <span class="px-3 py-1 bg-accent/20 text-accent rounded-full text-sm">Insights</span>
+                <span class="px-3 py-1 bg-primary/20 text-primary rounded-full text-sm">Live</span>
+              </div>
             </div>
           </div>
         </a>
 
-        <a href="https://parasreshammiya2-debug.github.io/parasreshammiya2.github.io/" target="_blank" class="modern-card rounded-2xl overflow-hidden group" data-aos="fade-up" data-aos-delay="200">
-          <div class="h-48 bg-gradient-to-br from-primary/20 via-accent/20 to-primary/20 flex items-center justify-center">
-            <img src="Website_Portfolio.jpg" alt="Portfolio Website Project" class="w-full h-full object-cover">
-          </div>
-          <div class="p-6">
-            <h3 class="text-xl font-bold mb-2 group-hover:text-primary transition">Portfolio Website (Dark Thame)</h3>
-            <p class="text-gray-400 mb-4 text-sm">Modern responsive portfolio with professional branding</p>
-            <div class="flex flex-wrap gap-2">
-              <span class="text-xs badge">Tailwind</span>
-              <span class="text-xs badge">Professional UI/UX</span>
-              <span class="text-xs badge">Responsive</span>
+        <a href="https://parasreshammiya2-debug.github.io/parasreshammiya2.github.io/" target="_blank" class="project-card modern-card rounded-3xl overflow-hidden group" data-aos="fade-up" data-aos-delay="300">
+          <div class="relative overflow-hidden">
+            <img src="Website_Portfolio.jpg" alt="Portfolio Website (Dark Theme)" class="w-full h-64 object-cover">
+            <div class="project-overlay">
+              <h3 class="text-2xl font-bold mb-2">Portfolio Website (Dark Theme)</h3>
+              <p class="mb-4">Modern responsive portfolio with professional branding</p>
+              <div class="flex gap-2">
+                <span class="px-3 py-1 bg-primary/20 text-primary rounded-full text-sm">Tailwind</span>
+                <span class="px-3 py-1 bg-accent/20 text-accent rounded-full text-sm">UI/UX</span>
+                <span class="px-3 py-1 bg-primary/20 text-primary rounded-full text-sm">Responsive</span>
+              </div>
             </div>
           </div>
         </a>
 
-        <a href="https://bhawanilimbu.com.np" target="_blank" class="modern-card rounded-2xl overflow-hidden group" data-aos="fade-up" data-aos-delay="200">
-          <div class="h-48 bg-gradient-to-br from-primary/20 via-accent/20 to-primary/20 flex items-center justify-center">
-            <img src="Bhawani website.png" alt="Portfolio Website Project" class="w-full h-full object-cover">
-          </div>
-          <div class="p-6">
-            <h3 class="text-xl font-bold mb-2 group-hover:text-primary transition">Portfolio Website (Dark/Light Thame)</h3>
-            <p class="text-gray-400 mb-4 text-sm">Modern responsive portfolio with professional branding</p>
-            <div class="flex flex-wrap gap-2">
-              <span class="text-xs badge">Ethereal/Gothic</span>
-              <span class="text-xs badge">Professional UI/UX</span>
-              <span class="text-xs badge">Fast & Responsive</span>
+        <a href="https://bhawanilimbu.com.np" target="_blank" class="project-card modern-card rounded-3xl overflow-hidden group" data-aos="fade-up" data-aos-delay="350">
+          <div class="relative overflow-hidden">
+            <img src="Bhawani website.png" alt="Portfolio Website (Dark/Light Theme)" class="w-full h-64 object-cover">
+            <div class="project-overlay">
+              <h3 class="text-2xl font-bold mb-2">Portfolio Website (Dark/Light Theme)</h3>
+              <p class="mb-4">Modern responsive portfolio with professional branding</p>
+              <div class="flex gap-2">
+                <span class="px-3 py-1 bg-primary/20 text-primary rounded-full text-sm">Ethereal</span>
+                <span class="px-3 py-1 bg-accent/20 text-accent rounded-full text-sm">UI/UX</span>
+                <span class="px-3 py-1 bg-primary/20 text-primary rounded-full text-sm">Responsive</span>
+              </div>
             </div>
           </div>
         </a>
@@ -882,12 +1063,12 @@
   </section>
 
   <!-- Contact Section -->
-  <section id="contact" class="py-24">
+  <section id="contact" class="py-24" aria-labelledby="contact-heading">
     <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
       
       <div class="text-center mb-16" data-aos="fade-up">
         <span class="badge mb-4">Get In Touch</span>
-        <h2 class="text-4xl md:text-5xl font-bold mb-4">
+        <h2 id="contact-heading" class="text-4xl md:text-5xl font-bold mb-4">
           Let's <span class="gradient-text">Connect</span>
         </h2>
         <p class="text-gray-400">
@@ -902,34 +1083,34 @@
           <div class="modern-card p-8 rounded-2xl">
             <div id="contactForm" class="space-y-6">
               <div>
-                <label class="block text-sm font-medium mb-2">Name</label>
+                <label for="name" class="block text-sm font-medium mb-2">Name</label>
                 <input type="text" id="name" 
                        class="w-full px-4 py-3 rounded-lg glass focus:outline-none focus:ring-2 focus:ring-primary transition"
-                       placeholder="Your name">
+                       placeholder="Your name" required>
               </div>
               
               <div>
-                <label class="block text-sm font-medium mb-2">Email</label>
+                <label for="email" class="block text-sm font-medium mb-2">Email</label>
                 <input type="email" id="email"
                        class="w-full px-4 py-3 rounded-lg glass focus:outline-none focus:ring-2 focus:ring-primary transition"
-                       placeholder="your.email@example.com">
+                       placeholder="your.email@example.com" required>
               </div>
               
               <div>
-                <label class="block text-sm font-medium mb-2">Subject</label>
+                <label for="subject" class="block text-sm font-medium mb-2">Subject</label>
                 <input type="text" id="subject"
                        class="w-full px-4 py-3 rounded-lg glass focus:outline-none focus:ring-2 focus:ring-primary transition"
-                       placeholder="Subject">
+                       placeholder="Subject" required>
               </div>
               
               <div>
-                <label class="block text-sm font-medium mb-2">Message</label>
+                <label for="message" class="block text-sm font-medium mb-2">Message</label>
                 <textarea id="message" rows="4"
                           class="w-full px-4 py-3 rounded-lg glass focus:outline-none focus:ring-2 focus:ring-primary transition"
-                          placeholder="Your message..."></textarea>
+                          placeholder="Your message..." required></textarea>
               </div>
 
-              <button onclick="sendMessage()" class="btn-primary w-full py-3 rounded-lg font-semibold flex items-center justify-center gap-2">
+              <button onclick="sendMessage()" id="submit-btn" class="btn-primary w-full py-3 rounded-lg font-semibold flex items-center justify-center gap-2">
                 <span>Send Message</span>
                 <i data-feather="send" class="w-4 h-4"></i>
               </button>
@@ -998,58 +1179,23 @@
   </section>
 
   <!-- Footer -->
-  <footer class="py-12 border-t" style="border-color: var(--color-border);">
+  <footer class="py-16 border-t" style="border-color: var(--color-border);">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
-        
-        <div>
-          <h3 class="text-2xl font-bold gradient-text mb-4">Dipak Shrestha</h3>
-          <p class="text-gray-400 mb-4">
-            Senior Administrator & Operations Management Professional
-          </p>
-          <div class="flex gap-3">
-            <a href="https://www.linkedin.com/in/dipak-shrestha-10203a171" target="_blank"
-               class="p-2 rounded-lg glass hover:bg-primary transition">
-              <i data-feather="linkedin" class="w-5 h-5"></i>
-            </a>
-            <a href="https://github.com/dipakshrestha2" target="_blank"
-               class="p-2 rounded-lg glass hover:bg-primary transition">
-              <i data-feather="github" class="w-5 h-5"></i>
-            </a>
-            <a href="mailto:me@dipakshrestha2.com.np"
-               class="p-2 rounded-lg glass hover:bg-primary transition">
-              <i data-feather="mail" class="w-5 h-5"></i>
-            </a>
-          </div>
-        </div>
-
-        <div>
-          <h4 class="font-semibold mb-4">Quick Links</h4>
-          <div class="space-y-2">
-            <a href="#home" class="block text-gray-400 hover:text-primary transition">Home</a>
-            <a href="#about" class="block text-gray-400 hover:text-primary transition">About</a>
-            <a href="#experience" class="block text-gray-400 hover:text-primary transition">Experience</a>
-            <a href="#skills" class="block text-gray-400 hover:text-primary transition">Skills</a>
-            <a href="#certifications" class="block text-gray-400 hover:text-primary transition">Certifications</a>
-</div>
-        </div>
-
-        <div>
-          <h4 class="font-semibold mb-4">Let's Work Together</h4>
-          <p class="text-gray-400 mb-4">
-            Available for consulting and full-time opportunities
-          </p>
-          <a href="#contact" class="btn-primary px-6 py-2 rounded-lg inline-block">
-            Hire Me
+      <div class="text-center">
+        <h3 class="text-3xl font-bold gradient-text mb-4">Dipak Shrestha</h3>
+        <p class="mb-6">Transforming Operations • Building Excellence • Driving Success</p>
+        <div class="flex justify-center gap-6 mb-8">
+          <a href="https://www.linkedin.com/in/dipak-shrestha-10203a171" target="_blank" class="p-3 rounded-full glass hover:bg-primary transition">
+            <i data-feather="linkedin" class="w-6 h-6"></i>
+          </a>
+          <a href="https://github.com/dipakshrestha2" target="_blank" class="p-3 rounded-full glass hover:bg-primary transition">
+            <i data-feather="github" class="w-6 h-6"></i>
+          </a>
+          <a href="mailto:me@dipakshrestha2.com.np" class="p-3 rounded-full glass hover:bg-primary transition">
+            <i data-feather="mail" class="w-6 h-6"></i>
           </a>
         </div>
-
-      </div>
-
-      <div class="text-center pt-8 border-t" style="border-color: var(--color-border);">
-        <p class="text-gray-400">
-          © 2025 Dipak Shrestha. All rights reserved.
-        </p>
+        <p style="color: var(--color-text-subtle);">© 2025 Dipak Shrestha. Built with ❤️ and lots of coffee.</p>
       </div>
     </div>
   </footer>
@@ -1203,6 +1349,7 @@
       const message = document.getElementById('message').value;
       const successMsg = document.getElementById('successMsg');
       const errorMsg = document.getElementById('errorMsg');
+      const submitBtn = document.getElementById('submit-btn');
 
       successMsg.classList.add('hidden');
       errorMsg.classList.add('hidden');
@@ -1212,6 +1359,11 @@
         setTimeout(() => errorMsg.classList.add('hidden'), 3000);
         return;
       }
+
+      // Show loading state
+      const originalText = submitBtn.innerHTML;
+      submitBtn.innerHTML = '<div class="loading"></div> Sending...';
+      submitBtn.disabled = true;
 
       emailjs.send("service_v6ez09g", "template_4phetwr", {
         subject: subject,
@@ -1232,6 +1384,10 @@
         errorMsg.textContent = '❌ Failed to send. Please try again.';
         errorMsg.classList.remove('hidden');
         setTimeout(() => errorMsg.classList.add('hidden'), 3000);
+      }).finally(() => {
+        // Reset button state
+        submitBtn.innerHTML = originalText;
+        submitBtn.disabled = false;
       });
     }
 
@@ -1258,6 +1414,24 @@
         nav.style.boxShadow = 'none';
       }
     });
+
+    // Lazy load images
+    if ('IntersectionObserver' in window) {
+      const imageObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const img = entry.target;
+            img.src = img.dataset.src;
+            img.classList.remove('lazy');
+            imageObserver.unobserve(img);
+          }
+        });
+      });
+
+      document.querySelectorAll('img[data-src]').forEach(img => {
+        imageObserver.observe(img);
+      });
+    }
   </script>
 </body>
 </html>
