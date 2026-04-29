@@ -92,8 +92,6 @@
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/build/three.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/vanta@0.5.24/dist/vanta.globe.min.js"></script>
 
   <style>
     /* Modern Color Variables */
@@ -187,15 +185,64 @@
       background-clip: text;
     }
 
-    /* Animated Background */
-    .animated-bg {
+    /* Modern CSS Background blobs */
+    .modern-bg {
       position: fixed;
       top: 0;
       left: 0;
-      width: 100%;
-      height: 100%;
+      width: 100vw;
+      height: 100vh;
+      z-index: -1;
+      overflow: hidden;
+      background: var(--color-bg-main);
+      transition: background-color 0.3s ease;
+    }
+
+    .blob {
+      position: absolute;
+      filter: blur(90px);
       z-index: -1;
       opacity: 0.5;
+      border-radius: 50%;
+      animation: float-blob 25s infinite alternate ease-in-out;
+      will-change: transform;
+    }
+
+    .blob-1 {
+      top: -15%;
+      left: -10%;
+      width: 50vw;
+      height: 50vw;
+      background: radial-gradient(circle, rgba(99, 102, 241, 0.4) 0%, rgba(99, 102, 241, 0) 70%);
+    }
+
+    .blob-2 {
+      bottom: -15%;
+      right: -10%;
+      width: 60vw;
+      height: 60vw;
+      background: radial-gradient(circle, rgba(236, 72, 153, 0.3) 0%, rgba(236, 72, 153, 0) 70%);
+      animation-delay: -5s;
+    }
+
+    .blob-3 {
+      top: 30%;
+      left: 50%;
+      width: 40vw;
+      height: 40vw;
+      background: radial-gradient(circle, rgba(129, 140, 248, 0.3) 0%, rgba(129, 140, 248, 0) 70%);
+      animation-delay: -10s;
+    }
+
+    [data-theme="light"] .blob {
+      opacity: 0.3;
+    }
+
+    @keyframes float-blob {
+      0% { transform: translate(0, 0) scale(1); }
+      33% { transform: translate(5vw, -5vh) scale(1.1); }
+      66% { transform: translate(-5vw, 5vh) scale(0.9); }
+      100% { transform: translate(0, 0) scale(1); }
     }
 
     /* Modern Card Hover */
@@ -535,8 +582,12 @@
 </head>
 
 <body>
-  <!-- Animated Background -->
-  <div id="vanta-bg" class="animated-bg"></div>
+  <!-- Modern Background -->
+  <div class="modern-bg" aria-hidden="true">
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="blob blob-3"></div>
+  </div>
 
   <!-- Skip to main content for accessibility -->
   <a href="#main-content" class="sr-only focus:not-sr-only">Skip to main content</a>
@@ -604,7 +655,7 @@
           </h2>
           
           <p class="text-lg text-gray-400 max-w-xl">
-            Strategic Operations Leader with 8+ years of experience in process optimization, team management, and data-driven decision making. Transforming complex operations into streamlined success.
+            Strategic Operations Leader with 8+ years of expertise in process optimization, cross-functional team leadership, and data-driven insights. I transform complex operational challenges into streamlined, scalable success stories.
           </p>
 
           <div class="flex flex-wrap gap-4">
@@ -666,9 +717,9 @@
         <div class="space-y-6" data-aos="fade-right">
           <p class="text-lg leading-relaxed">
             I am a results-driven <span class="text-primary font-semibold">Senior Administrator</span> 
-            with extensive experience in operations management, process improvement, and team leadership. 
-            I specialize in developing strategies that enhance efficiency, reduce costs, and elevate 
-            business performance across complex organizations.
+            with over 8 years of expertise in operational management, process re-engineering, and strategic leadership. 
+            I excel at transforming data into actionable insights, designing scalable workflows, and leading 
+            cross-functional teams to exceed performance benchmarks.
           </p>
 
           <div class="grid grid-cols-2 gap-4">
@@ -773,9 +824,9 @@
               <span class="px-4 py-2 bg-accent/10 text-accent rounded-full text-sm font-semibold">Jan 2022 – Apr 2023</span>
             </div>
             <ul class="space-y-2">
-              <li class="flex items-start gap-3"><i data-feather="check-circle" class="w-5 h-5 text-success mt-1"></i>Led operations, procurement & compliance</li>
-              <li class="flex items-start gap-3"><i data-feather="check-circle" class="w-5 h-5 text-success mt-1"></i>Trained junior administrators</li>
-              <li class="flex items-start gap-3"><i data-feather="check-circle" class="w-5 h-5 text-success mt-1"></i>Provide 24/7 on-call emergency support as part of the Business Intelligence Team.</li>
+              <li class="flex items-start gap-3"><i data-feather="check-circle" class="w-5 h-5 text-success mt-1"></i>Spearheaded operations, procurement, and risk compliance</li>
+              <li class="flex items-start gap-3"><i data-feather="check-circle" class="w-5 h-5 text-success mt-1"></i>Mentored and upskilled a team of junior administrators</li>
+              <li class="flex items-start gap-3"><i data-feather="check-circle" class="w-5 h-5 text-success mt-1"></i>Delivered 24/7 critical emergency support as a key Business Intelligence Team member</li>
             </ul>
           </div>
         </div>
@@ -1269,13 +1320,6 @@
       html.setAttribute('data-theme', newTheme);
       localStorage.setItem('theme', newTheme);
       updateThemeIcon(newTheme);
-      
-      if (window.vantaEffect) {
-        window.vantaEffect.setOptions({
-          color: newTheme === 'dark' ? 0x6366f1 : 0x6366f1,
-          backgroundColor: newTheme === 'dark' ? 0x0a0a0f : 0xffffff
-        });
-      }
     });
 
     function updateThemeIcon(theme) {
@@ -1356,26 +1400,7 @@
       skillObserver.observe(bar);
     });
 
-    // Initialize Vanta.js
-    if (document.getElementById('vanta-bg')) {
-      const isDark = html.getAttribute('data-theme') === 'dark';
-      window.vantaEffect = VANTA.GLOBE({
-        el: "#vanta-bg",
-        mouseControls: true,
-        touchControls: true,
-        gyroControls: false,
-        minHeight: 200.00,
-        minWidth: 200.00,
-        scale: 1.00,
-        scaleMobile: 1.00,
-        color: 0x6366f1,
-        backgroundColor: isDark ? 0x0a0a0f : 0xffffff,
-        size: 0.8,
-        points: 10.00,
-        maxDistance: 20.00,
-        spacing: 15.00
-      });
-    }
+    // Custom animations or logic can be added here
 
     // Contact Form
     function sendMessage() {
