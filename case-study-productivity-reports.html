@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- SEO META TAGS -->
+  <meta name="description"
+    content="Case Study: Shift & Productivity Analytics by Dipak Shrestha. Streamlining rosters and payroll metrics for 3,000+ employees.">
+  <meta name="keywords"
+    content="Operations Manager, Shift Analytics, Workforce Optimization, Business Analyst, Excel VBA, Dipak Shrestha">
+  <meta name="author" content="Dipak Shrestha">
+  <title>Shift & Productivity Analytics | Case Study — Dipak Shrestha</title>
+
+  <!-- CANONICAL URL -->
+  <link rel="canonical" href="https://dipakshrestha2.com.np/case-study-productivity-reports.html">
+
+  <!-- Font and CDNs -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+
+  <style>
+    [data-theme="dark"] {
+      --color-primary: #6366f1;
+      --color-accent: #ec4899;
+      --color-bg-main: #06060b;
+      --color-bg-secondary: #0d0d16;
+      --color-bg-card: rgba(17, 17, 30, 0.7);
+      --color-text-main: #f1f5f9;
+      --color-text-subtle: #94a3b8;
+      --color-border: rgba(99, 102, 241, 0.12);
+    }
+
+    [data-theme="light"] {
+      --color-primary: #6366f1;
+      --color-accent: #ec4899;
+      --color-bg-main: #fafbff;
+      --color-bg-secondary: #f0f2ff;
+      --color-bg-card: rgba(255, 255, 255, 0.8);
+      --color-text-main: #0f172a;
+      --color-text-subtle: #64748b;
+      --color-border: rgba(99, 102, 241, 0.15);
+    }
+
+    body {
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      background-color: var(--color-bg-main);
+      color: var(--color-text-main);
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    .glass {
+      background: rgba(255, 255, 255, 0.03);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid var(--color-border);
+    }
+    
+    [data-theme="light"] .glass {
+      background: rgba(255, 255, 255, 0.6);
+    }
+
+    .gradient-text {
+      background: linear-gradient(135deg, var(--color-primary), var(--color-accent));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--color-primary), #4f46e5);
+      color: white;
+      box-shadow: 0 4px 15px rgba(99, 102, 241, 0.35);
+    }
+  </style>
+</head>
+
+<body class="min-h-screen py-12 px-4 sm:px-6 lg:px-8">
+  <div class="max-w-4xl mx-auto space-y-12">
+    
+    <!-- Top Nav -->
+    <header class="flex justify-between items-center py-4 border-b border-dashed border-primary/20">
+      <a href="index.html#projects" class="inline-flex items-center gap-2 text-sm font-semibold hover:text-primary transition">
+        <i data-feather="arrow-left" class="w-4 h-4"></i> Back to Portfolio
+      </a>
+      <button id="theme-toggle" class="p-2 rounded-full hover:bg-gray-800/30 transition" aria-label="Toggle theme">
+        <i data-feather="moon" class="w-5 h-5"></i>
+      </button>
+    </header>
+
+    <!-- Header Section -->
+    <section class="space-y-6 text-center md:text-left">
+      <span class="inline-block px-3 py-1 bg-accent/10 text-accent rounded-full text-xs font-semibold uppercase tracking-wider">
+        Operations Optimization
+      </span>
+      <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight" style="font-family: 'Space Grotesk', sans-serif;">
+        Shift & <span class="gradient-text">Productivity</span> Analytics
+      </h1>
+      <p style="color: var(--color-text-subtle);" class="text-lg md:text-xl max-w-3xl">
+        Automating shift coordination, scheduling checks, and monthly productivity reporting for a workforce of 3,000+ employees.
+      </p>
+      
+      <!-- Metrics Grid -->
+      <div class="grid grid-cols-2 md:grid-cols-3 gap-6 pt-4">
+        <div class="glass p-6 rounded-2xl text-center">
+          <div class="text-3xl font-extrabold gradient-text">3,000+</div>
+          <div class="text-xs uppercase tracking-wider mt-1" style="color: var(--color-text-subtle);">Staff Handled</div>
+        </div>
+        <div class="glass p-6 rounded-2xl text-center">
+          <div class="text-3xl font-extrabold gradient-text">40+ Hrs</div>
+          <div class="text-xs uppercase tracking-wider mt-1" style="color: var(--color-text-subtle);">Saved per Month</div>
+        </div>
+        <div class="glass p-6 rounded-2xl text-center col-span-2 md:col-span-1">
+          <div class="text-3xl font-extrabold gradient-text">100%</div>
+          <div class="text-xs uppercase tracking-wider mt-1" style="color: var(--color-text-subtle);">Data Accuracy</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Main Content Details -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-12 pt-4">
+      
+      <!-- Left 2/3 Content -->
+      <div class="md:col-span-2 space-y-8">
+        
+        <!-- Challenge -->
+        <article class="space-y-4">
+          <h2 class="text-2xl font-bold" style="font-family: 'Space Grotesk', sans-serif;">The Challenge</h2>
+          <p style="color: var(--color-text-subtle);" class="leading-relaxed">
+            Coordinating schedules, shift attendance, compliance records, and payroll data for over 3,000 employees spread across multiple clients and sectors in Dubai was a massive challenge. Manual data entry in spreadsheets frequently resulted in roster overlap, payroll calculation errors, and slow productivity reviews, which delayed operational adjustments.
+          </p>
+        </article>
+
+        <!-- Solution -->
+        <article class="space-y-4">
+          <h2 class="text-2xl font-bold" style="font-family: 'Space Grotesk', sans-serif;">The Solution</h2>
+          <p style="color: var(--color-text-subtle);" class="leading-relaxed mb-4">
+            I developed a centralized SQL-backed relational database database structure connected to Microsoft Power BI. Through Excel VBA macros, I created automated data validation modules that:
+          </p>
+          <ul class="list-disc pl-5 space-y-2 text-slate-400 text-sm">
+            <li>Flagged scheduling overlap conflicts during input, ensuring roster safety.</li>
+            <li>Directly validated payroll records against active shift data structures.</li>
+            <li>Calculated monthly employee performance indexes to automatically highlight top performers.</li>
+          </ul>
+        </article>
+
+        <!-- Results -->
+        <article class="space-y-4">
+          <h2 class="text-2xl font-bold" style="font-family: 'Space Grotesk', sans-serif;">Outcomes & Results</h2>
+          <ul class="space-y-3">
+            <li class="flex items-start gap-2">
+              <i data-feather="check" class="w-5 h-5 text-emerald-400 mt-0.5 flex-shrink-0"></i>
+              <span style="color: var(--color-text-subtle);">Eliminated scheduling conflicts entirely, saving 40+ hours of manual corrections every single month.</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <i data-feather="check" class="w-5 h-5 text-emerald-400 mt-0.5 flex-shrink-0"></i>
+              <span style="color: var(--color-text-subtle);">Achieved 100% data compliance for audit records, removing payroll risk penalties.</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <i data-feather="check" class="w-5 h-5 text-emerald-400 mt-0.5 flex-shrink-0"></i>
+              <span style="color: var(--color-text-subtle);">Established automated visual performance reports, facilitating prompt operational pivots.</span>
+            </li>
+          </ul>
+        </article>
+      </div>
+
+      <!-- Right 1/3 Side Info -->
+      <div class="space-y-6">
+        <div class="glass p-6 rounded-3xl space-y-6">
+          <div>
+            <h3 class="font-bold text-sm uppercase tracking-wider mb-3">Tools & Systems</h3>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-3 py-1 bg-primary/10 text-primary rounded-lg text-xs font-semibold">Excel (VBA)</span>
+              <span class="px-3 py-1 bg-primary/10 text-primary rounded-lg text-xs font-semibold">SQL Server</span>
+              <span class="px-3 py-1 bg-primary/10 text-primary rounded-lg text-xs font-semibold">Power BI</span>
+              <span class="px-3 py-1 bg-primary/10 text-primary rounded-lg text-xs font-semibold">SharePoint</span>
+              <span class="px-3 py-1 bg-primary/10 text-primary rounded-lg text-xs font-semibold">Workforce ERP</span>
+            </div>
+          </div>
+          
+          <div class="border-t border-primary/10 pt-6">
+            <h3 class="font-bold text-sm uppercase tracking-wider mb-3">Focus Areas</h3>
+            <ul class="text-xs space-y-2 text-slate-400">
+              <li>• Shift allocation algorithms</li>
+              <li>• Data verification macros</li>
+              <li>• Payroll auditing pipelines</li>
+              <li>• Stakeholder KPIs & Visual reports</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Visual Dashboard Mockup Card -->
+    <section class="glass p-8 rounded-3xl text-center space-y-6">
+      <h3 class="text-xl font-bold" style="font-family: 'Space Grotesk', sans-serif;">Shift Analytics Layout</h3>
+      <div class="relative rounded-2xl overflow-hidden shadow-2xl border border-primary/10">
+        <img src="Screenshot 2025-09-21 at 18.04.20.png" alt="Productivity Report Dashboard Preview" class="w-full object-cover max-h-[450px]">
+      </div>
+      <p class="text-xs text-slate-400">Monthly shift compliance and performance metrics dashboard model.</p>
+    </section>
+
+    <!-- Footer CTA -->
+    <footer class="text-center py-8 border-t border-dashed border-primary/20">
+      <a href="index.html#contact" class="btn-primary inline-flex items-center gap-2 px-8 py-3 rounded-full font-semibold transition">
+        Inquire for Workforce Optimization <i data-feather="mail" class="w-4 h-4"></i>
+      </a>
+    </footer>
+
+  </div>
+
+  <script>
+    feather.replace();
+
+    // Theme Toggle Functionality
+    const themeToggle = document.getElementById('theme-toggle');
+    const html = document.documentElement;
+
+    const savedTheme = localStorage.getItem('theme') || 'dark';
+    html.setAttribute('data-theme', savedTheme);
+    updateThemeIcon(savedTheme);
+
+    themeToggle.addEventListener('click', () => {
+      const currentTheme = html.getAttribute('data-theme');
+      const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+      html.setAttribute('data-theme', newTheme);
+      localStorage.setItem('theme', newTheme);
+      updateThemeIcon(newTheme);
+    });
+
+    function updateThemeIcon(theme) {
+      const icon = theme === 'dark' ? 'sun' : 'moon';
+      themeToggle.innerHTML = `<i data-feather="${icon}" class="w-5 h-5"></i>`;
+      feather.replace();
+    }
+  </script>
+</body>
+
+</html>
